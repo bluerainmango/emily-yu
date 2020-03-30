@@ -5,18 +5,18 @@ import "./about.style.css";
 
 export const About = () => {
   return (
-    <section id="about" class="scrollFollower">
-      <span class="anchor" id="anchor-about"></span>
-      <h2 class="section__header">ABOUT</h2>
+    <section id="about" className="scrollFollower">
+      <span className="anchor" id="anchor-about"></span>
+      <h2 className="section__header">ABOUT</h2>
 
-      <div class="section__container">
+      <div className="section__container">
         <h3>
           <blockquote>
             Fast learner who truly enjoys solving problems
           </blockquote>
         </h3>
 
-        <div class="section__description">
+        <div className="section__description">
           <p>
             Full Stack Web Developer with 5 years of experience in E-commerce
             and Online marketing. Recently educated at the University of

@@ -1,22 +1,50 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./App.css";
 
 // import $ from "jquery";
-import { Waypoint } from "react-waypoint";
+// import { Waypoint } from "react-waypoint";
 
 import Header from "./components/header/header.component";
 import { About } from "./components/about/about.component";
 import { TopNav } from "./components/top-nav/top-nav.component";
-import { SideNav } from "./components/side-nav/side-nav.component";
+import { SideNavMenu } from "./components/side-nav/side-nav.component";
 
 function App() {
+  const mainRef = useRef();
+  const [hiddenSideNav, setHiddenSideNav] = useState(true);
+  const [sideNavTop, setSideNavTop] = useState(0);
+
+  const handleOnScroll = () => {
+    const scrollY = window.scrollY;
+    const mainOffsetTop = mainRef.current.offsetTop;
+
+    console.log(
+      `onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${mainOffsetTop}`
+    );
+
+    // if scroll down below main
+    if (scrollY - mainOffsetTop >= 0) {
+      console.log("show");
+      setHiddenSideNav(false);
+    } else {
+      console.log("hide");
+      setHiddenSideNav(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleOnScroll);
+    return () => {
+      window.removeEventListener("scroll", handleOnScroll);
+    };
+  }, []);
+
   return (
     <div className="App">
-      <Waypoint />
       <TopNav />
       <Header />
-      {/* <SideNav /> */}
-      <main>
+      <SideNavMenu hidden={hiddenSideNav} />
+      <main ref={mainRef}>
         <About />
       </main>
     </div>

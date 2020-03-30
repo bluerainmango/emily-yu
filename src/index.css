@@ -65,27 +65,3 @@ blockquote {
 .no-max-height {
   max-height: none;
 }
-
-/**********************************/
-/*               Main             */
-/**********************************/
-
-main {
-  /* Offset for content next to side nav */
-  padding-left: 300px;
-  width: 100%;
-}
-.section__header {
-  background-image: linear-gradient(to right, rgb(0, 162, 255), #0d47a1);
-  color: #fff;
-  padding: 3rem 3rem 3rem 3rem;
-  margin: 0;
-}
-.section__container {
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-.section__container h3 {
-  margin: 5rem 0;
-}

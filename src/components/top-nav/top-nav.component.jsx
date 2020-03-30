@@ -8,9 +8,10 @@ export const TopNav = () => (
     alignLinks="right"
     brand={
       <a className="brand-logo" href="#">
-        Logo
+        Emily Yu
       </a>
     }
+    centerChildren
     id="mobile-nav"
     menuIcon={<Icon>menu</Icon>}
     options={{
@@ -22,10 +23,11 @@ export const TopNav = () => (
       onOpenEnd: null,
       onOpenStart: null,
       outDuration: 200,
-      preventScrolling: true
+      preventScrolling: true,
+      fixed: true
     }}
   >
-    <NavItem href="">Getting started</NavItem>
-    <NavItem href="components.html">Components</NavItem>
+    {/* <NavItem href="">Getting started</NavItem>
+    <NavItem href="components.html">Components</NavItem> */}
   </Navbar>
 );
