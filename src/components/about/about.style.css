@@ -1,0 +1,20 @@
+/* ABOUT */
+#about {
+  position: relative;
+  margin-bottom: 36rem;
+}
+.section__description {
+  font-size: 1.7rem;
+}
+.section__description p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  left: -30rem;
+  height: 100vh;
+  background-color: rgb(0, 162, 255);
+  width: 30rem;
+}
