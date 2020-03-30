@@ -8,6 +8,7 @@ import Header from "./components/header/header.component";
 import { About } from "./components/about/about.component";
 import { TopNav } from "./components/top-nav/top-nav.component";
 import { SideNavMenu } from "./components/side-nav/side-nav.component";
+import { Skill } from "./components/skill/skill.component";
 
 function App() {
   const mainRef = useRef();
@@ -49,6 +50,7 @@ function App() {
       <SideNavMenu hidden={hiddenSideNav} />
       <main ref={mainRef}>
         <About />
+        <Skill />
       </main>
     </div>
   );

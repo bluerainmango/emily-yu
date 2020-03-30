@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./side-nav.style.css";
-import { SideNav, SideNavItem, Button } from "react-materialize";
+import { SideNav, SideNavItem } from "react-materialize";
 // import { Waypoint } from "waypoints";
-import $ from "jquery";
+// import $ from "jquery";
 
 export const SideNavMenu = props => {
   // $(".sidenav").attr("style", "display:none;");

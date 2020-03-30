@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1bba6c0b.chunk.css",
+    "main.js": "/static/js/main.43f6aaea.chunk.js",
+    "main.js.map": "/static/js/main.43f6aaea.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ceaf4b5f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ceaf4b5f.js.map",
+    "static/css/2.5a510433.chunk.css": "/static/css/2.5a510433.chunk.css",
+    "static/js/2.25297e5b.chunk.js": "/static/js/2.25297e5b.chunk.js",
+    "static/js/2.25297e5b.chunk.js.map": "/static/js/2.25297e5b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b84a0de48508c30704481cde7a8867e3.js": "/precache-manifest.b84a0de48508c30704481cde7a8867e3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.5a510433.chunk.css.map": "/static/css/2.5a510433.chunk.css.map",
+    "static/css/main.1bba6c0b.chunk.css.map": "/static/css/main.1bba6c0b.chunk.css.map",
+    "static/js/2.25297e5b.chunk.js.LICENSE.txt": "/static/js/2.25297e5b.chunk.js.LICENSE.txt",
+    "static/media/bootstrap.png": "/static/media/bootstrap.22e6fce3.png",
+    "static/media/cafe24.jpg": "/static/media/cafe24.145b4dfd.jpg",
+    "static/media/css3.png": "/static/media/css3.31be075e.png",
+    "static/media/express.png": "/static/media/express.9e4644bc.png",
+    "static/media/github.png": "/static/media/github.3cea1e68.png",
+    "static/media/html5.png": "/static/media/html5.88225dbd.png",
+    "static/media/jquery.png": "/static/media/jquery.ed7319af.png",
+    "static/media/js.png": "/static/media/js.7f025be0.png",
+    "static/media/materialize.png": "/static/media/materialize.e8520d9a.png",
+    "static/media/mongodb.png": "/static/media/mongodb.6fca776e.png",
+    "static/media/mysql.jpg": "/static/media/mysql.c266e5d3.jpg",
+    "static/media/nodejs.png": "/static/media/nodejs.22f8da5b.png",
+    "static/media/react.png": "/static/media/react.616730d1.png",
+    "static/media/sass.png": "/static/media/sass.4d8c0726.png",
+    "static/media/sequelize.jpg": "/static/media/sequelize.18d968a0.jpg",
+    "static/media/shopify.png": "/static/media/shopify.c4fa2b99.png",
+    "static/media/webpack.png": "/static/media/webpack.5751d89c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ceaf4b5f.js",
+    "static/css/2.5a510433.chunk.css",
+    "static/js/2.25297e5b.chunk.js",
+    "static/css/main.1bba6c0b.chunk.css",
+    "static/js/main.43f6aaea.chunk.js"
+  ]
+}

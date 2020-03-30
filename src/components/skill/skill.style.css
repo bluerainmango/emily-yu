@@ -1,0 +1,37 @@
+/* SKILLS */
+#skill {
+  margin-bottom: 20rem;
+}
+.section__slot {
+  margin: 0 0 3rem 1rem;
+}
+.section__slot--title {
+  color: rgb(94, 94, 94);
+}
+.section__slot img {
+  width: 6rem;
+  margin-right: 3rem;
+}
+
+/* Responsive - landscape */
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+  #skill {
+    margin-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #skill {
+    margin-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .section__slot--title {
+    font-size: 1.7rem;
+  }
+  .section__slot img {
+    width: 4.5rem;
+    margin-right: 1rem;
+  }
+}

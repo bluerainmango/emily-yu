@@ -1,7 +1,7 @@
 import React from "react";
 import "./top-nav.style.css";
 
-import { Navbar, NavItem, Icon } from "react-materialize";
+import { Navbar, Icon } from "react-materialize";
 
 export const TopNav = props => (
   <div>
