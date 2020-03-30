@@ -9,6 +9,7 @@ import { About } from "./components/about/about.component";
 import { TopNav } from "./components/top-nav/top-nav.component";
 import { SideNavMenu } from "./components/side-nav/side-nav.component";
 import { Skill } from "./components/skill/skill.component";
+import { Project } from "./components/project/project.component";
 
 function App() {
   const mainRef = useRef();
@@ -51,6 +52,7 @@ function App() {
       <main ref={mainRef}>
         <About />
         <Skill />
+        <Project />
       </main>
     </div>
   );

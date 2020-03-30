@@ -25,10 +25,10 @@ import "./skill.style.css";
 
 export const Skill = () => {
   return (
-    <section id="skill" class="scrollFollower">
-      <span class="anchor" id="anchor-skill"></span>
-      <h2 class="section__header">SKILLS</h2>
-      <div class="section__container">
+    <section id="skill" className="scrollFollower">
+      <span className="anchor" id="anchor-skill"></span>
+      <h2 className="section__header">SKILLS</h2>
+      <div className="section__container">
         <h3>
           <blockquote>
             Love learning and always ready for new technology
