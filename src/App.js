@@ -12,7 +12,8 @@ import { SideNavMenu } from "./components/side-nav/side-nav.component";
 function App() {
   const mainRef = useRef();
   const [hiddenSideNav, setHiddenSideNav] = useState(true);
-  const [sideNavTop, setSideNavTop] = useState(0);
+  // const [hiddenTopNav, setHiddenTopNav] = useState(true);
+  // const [sideNavTop, setSideNavTop] = useState(0);
 
   const handleOnScroll = () => {
     const scrollY = window.scrollY;
@@ -26,9 +27,11 @@ function App() {
     if (scrollY - mainOffsetTop >= 0) {
       console.log("show");
       setHiddenSideNav(false);
+      // setHiddenTopNav(false);
     } else {
       console.log("hide");
       setHiddenSideNav(true);
+      // setHiddenTopNav(true);
     }
   };
 
