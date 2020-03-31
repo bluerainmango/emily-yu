@@ -20,8 +20,10 @@
   color: #fff !important;
   width: 15rem;
   height: 5rem;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  margin-right: 5rem;
   background-color: rgb(0, 162, 255);
   border-radius: 2%;
   position: relative;
@@ -41,7 +43,12 @@
 #experience {
   margin-bottom: 20rem;
 }
-
+.card-link a {
+  margin-right: 5rem;
+}
+.btn-floating {
+  border-radius: 0 !important;
+}
 /* Pulse wave button */
 .play-btn:before {
   content: "";
@@ -159,6 +166,10 @@
   li,
   .card-link {
     font-size: 1.3rem;
+  }
+  .card-link {
+    display: flex;
+    flex-direction: column;
   }
   #experience {
     margin-bottom: 9rem;
