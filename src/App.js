@@ -12,6 +12,7 @@ import { Skill } from "./components/skill/skill.component";
 import { Project } from "./components/project/project.component";
 import { Experience } from "./components/experience/experience.component";
 import { Education } from "./components/education/education.component";
+import { Contact } from "./components/contact/contact.component";
 
 function App() {
   const mainRef = useRef();
@@ -57,6 +58,7 @@ function App() {
         <Project />
         <Experience />
         <Education />
+        <Contact />
       </main>
     </div>
   );
