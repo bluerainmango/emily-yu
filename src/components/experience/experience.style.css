@@ -1,0 +1,166 @@
+/* Experience */
+.text-header {
+  font-size: 2rem !important;
+}
+.card.wide {
+  width: 100%;
+}
+.card-reveal li {
+  list-style-type: square !important;
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+}
+.card-reveal .card-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.play-btn {
+  color: #fff !important;
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 162, 255);
+  border-radius: 2%;
+  position: relative;
+  box-shadow: 0px 0px 25px 3px rgba(0, 110, 255, 0.8);
+}
+.play-btn > p {
+  height: 100%;
+  text-align: center;
+}
+.halfway-fab {
+  border-radius: 0;
+}
+.card-highlight {
+  background-color: rgb(68, 68, 68);
+  color: #fff;
+}
+#experience {
+  margin-bottom: 20rem;
+}
+
+/* Pulse wave button */
+.play-btn:before {
+  content: "";
+  position: absolute;
+  width: 170%;
+  height: 170%;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate1 2s;
+  animation: pulsate1 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 0%;
+  border: 3px solid rgba(255, 255, 255, 0.75);
+  top: -35%;
+  left: -35%;
+  background: rgba(198, 16, 0, 0);
+}
+
+@-webkit-keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
+      0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+@keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
+      0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8);
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+/* Border animation */
+.gradient-border {
+  --borderWidth: 3px;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #4fbeff,
+    #4cb4fa,
+    #0051ff
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  -webkit-animation: animatedgradient 3s ease alternate infinite;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@-webkit-keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  /* Experience, Education(text) */
+  .card-content p,
+  li,
+  .card-link {
+    font-size: 1.3rem;
+  }
+  #experience {
+    margin-bottom: 9rem;
+  }
+}

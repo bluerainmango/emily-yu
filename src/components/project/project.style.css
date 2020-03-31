@@ -5,7 +5,7 @@
   height: max-content !important;
   margin: 0 auto;
   position: relative;
-  top: -20% !important;
+  /* top: -20% !important; */
 }
 
 /* .section__container--project {
@@ -16,8 +16,10 @@
   /* overflow: visible !important; */
   /* height: max-content !important; */
   /* height: min-content; */
-  height: 100rem !important;
+  height: 70rem !important;
   /* transform: translateY(-40rem); */
+  display: flex;
+  align-items: center;
 }
 .carousel-help {
   width: 100%;
@@ -62,7 +64,7 @@
 
 @media only screen and (max-width: 460px) {
   .carousel-item,
-  .carousel-item > .card {
+  .carousel-item .card {
     width: 30rem !important;
     transform: translateX(0.4rem);
   }
@@ -70,6 +72,6 @@
     padding: 1.5rem;
   }
   .section__container--project {
-    max-height: 106vh;
+    /* max-height: 106vh; */
   }
 }
