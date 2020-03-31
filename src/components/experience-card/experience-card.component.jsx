@@ -1,6 +1,8 @@
 import React from "react";
 import { Icon } from "react-materialize";
 
+import "./experience-card.style.css";
+
 export const ExperienceCardLarge = () => (
   <div className="card wide gradient-border">
     <div className="bar top"></div>

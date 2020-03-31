@@ -11,6 +11,7 @@ import { SideNavMenu } from "./components/side-nav/side-nav.component";
 import { Skill } from "./components/skill/skill.component";
 import { Project } from "./components/project/project.component";
 import { Experience } from "./components/experience/experience.component";
+import { Education } from "./components/education/education.component";
 
 function App() {
   const mainRef = useRef();
@@ -55,6 +56,7 @@ function App() {
         <Skill />
         <Project />
         <Experience />
+        <Education />
       </main>
     </div>
   );
