@@ -1,0 +1,62 @@
+.card {
+  width: 40rem;
+}
+.card-action {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.card-action a {
+  color: rgb(0, 162, 255) !important;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.card-header :first-child {
+  margin-right: 2rem;
+}
+.card-content {
+  padding-bottom: 0 !important;
+  font-size: 1.6rem;
+}
+/* .card-link {
+  border-top: rgb(197, 197, 197) 1px solid;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem 0;
+  align-items: center;
+} */
+/* .card-link > * {
+  margin-right: 3rem;
+} */
+/* .card-link a {
+  color: rgb(0, 162, 255);
+} */
+.card-tag {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-header--Team,
+.card-header--Indv,
+.card-tag span {
+  background-color: rgb(0, 162, 255);
+  padding: 3px 5px;
+  margin: 1px;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
+.card-header--Team {
+  background-color: rgb(255, 115, 0);
+}
+.card-header--Indv {
+  background-color: rgb(0, 128, 11);
+}
+
+.card-image {
+  height: 20rem;
+  overflow: hidden;
+}

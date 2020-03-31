@@ -125,7 +125,7 @@ export const projectData = [
     type: "Indv",
     role: "",
     description:
-      "CMS(Content Management System) for Human Resource.Manage the departments, roles and employees in companies to keep track of current business situation.",
+      "CMS(Content Management System) for Human Resource. Manage the departments, roles and employees in companies to keep track of current business situation.",
     tech: ["MySQL", "Node.js", "Express"]
   },
   {

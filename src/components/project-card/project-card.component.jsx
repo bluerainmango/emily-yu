@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Icon, CardTitle, Col } from "react-materialize";
 
+import "./project-card.style.css";
+
 export const ProjectCard = ({ proj }) => {
   return (
     <Col key={123}>
@@ -12,7 +14,7 @@ export const ProjectCard = ({ proj }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Deployed version
+            {proj.linkDeploy ? "Deployed version" : ""}
           </a>,
           <a
             key={proj.linkRepo}
@@ -29,7 +31,7 @@ export const ProjectCard = ({ proj }) => {
       >
         <div className="card-header">
           <h4>{proj.title}</h4>
-          <span className="card-header--team">{proj.type} Proj</span>
+          <span className={`card-header--${proj.type}`}>{proj.type} Proj</span>
         </div>
         <p className="role line-height-m red-text text-darken-4">{proj.role}</p>
         <p>{proj.description}</p>
