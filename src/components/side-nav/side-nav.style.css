@@ -2,10 +2,29 @@
 /*            Side Nav            */
 /**********************************/
 
-.background {
+.profile {
+  background-image: url(../../assets/img/profile_640x480.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  /* position: relative; */
+  display: flex;
+  align-items: flex-end;
+}
+#sideNav li {
+  width: 100%;
+}
+.sidenav .divider {
+  margin: 0 !important;
+  background-color: rgb(0, 162, 255);
+  height: 3px;
+}
+
+/* .background {
   height: 30rem;
   position: relative;
 }
+
 .profileInfo {
   position: absolute;
   top: 25rem;
@@ -21,7 +40,8 @@
 .background img {
   width: 100%;
   height: auto;
-}
+} */
+
 #divider-nav {
   background-color: rgb(0, 162, 255);
   margin-top: 5px;

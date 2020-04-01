@@ -24,7 +24,7 @@ export const Project = () => {
             dist: -100,
             duration: 200,
             fullWidth: false,
-            indicators: true,
+            indicators: false,
             noWrap: false,
             numVisible: 5,
             onCycleTo: null,
