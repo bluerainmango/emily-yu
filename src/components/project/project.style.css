@@ -1,23 +1,13 @@
 /* PROJECTS */
 .carousel-item {
   width: 40rem !important;
-  /* height: 100% !important; */
   height: max-content !important;
   margin: 0 auto;
   position: relative;
-  /* top: -20% !important; */
 }
 
-/* .section__container--project {
-  max-height: 100vh;
-  overflow: hidden;
-} */
 .carousel {
-  /* overflow: visible !important; */
-  /* height: max-content !important; */
-  /* height: min-content; */
   height: 75rem !important;
-  /* transform: translateY(-40rem); */
   display: flex;
   align-items: center;
 }
@@ -57,9 +47,6 @@
 }
 
 @media only screen and (max-width: 850px) and (orientation: landscape) {
-  /* .section__container--project {
-    max-height: 206vh;
-  } */
   .carousel {
     height: 80rem !important;
   }
@@ -73,8 +60,5 @@
   }
   .card-content {
     padding: 1.5rem;
-  }
-  .section__container--project {
-    /* max-height: 106vh; */
   }
 }

@@ -7,7 +7,6 @@
   background-size: cover;
   background-position: center;
   height: 30vh;
-  /* position: relative; */
   display: flex;
   align-items: flex-end;
 }
@@ -20,28 +19,6 @@
   background-color: rgb(0, 162, 255);
   height: 3px;
 }
-
-/* .background {
-  height: 30rem;
-  position: relative;
-}
-
-.profileInfo {
-  position: absolute;
-  top: 25rem;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.75;
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.863);
-  background-color: rgba(34, 34, 34, 0.267);
-  padding: 0 3rem;
-}
-.background img {
-  width: 100%;
-  height: auto;
-} */
 
 #divider-nav {
   background-color: rgb(0, 162, 255);
