@@ -1,9 +1,7 @@
 import React from "react";
 import "./side-nav.style.css";
-import { SideNav, SideNavItem } from "react-materialize";
+import { SideNav, SideNavItem, Button } from "react-materialize";
 
-import profileImg from "../../assets/img/profile.jpeg";
-import js from "../../assets/img/js.png";
 // import { Waypoint } from "waypoints";
 // import $ from "jquery";
 
@@ -31,7 +29,6 @@ export const SideNavMenu = props => {
         {`
                 #root > div > div {
                   z-index: 99999 !important;
-                  {/* transform: translateY(${props.sideNavTop}px) */}
                 }
               `}
       </style>

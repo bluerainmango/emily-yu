@@ -16,7 +16,7 @@
   /* overflow: visible !important; */
   /* height: max-content !important; */
   /* height: min-content; */
-  height: 70rem !important;
+  height: 75rem !important;
   /* transform: translateY(-40rem); */
   display: flex;
   align-items: center;
@@ -57,8 +57,11 @@
 }
 
 @media only screen and (max-width: 850px) and (orientation: landscape) {
-  .section__container--project {
+  /* .section__container--project {
     max-height: 206vh;
+  } */
+  .carousel {
+    height: 80rem !important;
   }
 }
 
