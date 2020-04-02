@@ -1,11 +1,9 @@
-import $ from "jquery";
-
 export const headerAnimation = () => {
-  const words = $(".word");
+  const words = document.querySelectorAll(".word");
   let wordArr = [];
   let currentWordIndex = 0;
 
-  $(words[currentWordIndex]).css("opacity", 1);
+  words[currentWordIndex].style.opacity = 1;
 
   // Splite each words and add it to wordArr
   for (let i = 0; i < words.length; i++) {
@@ -15,8 +13,7 @@ export const headerAnimation = () => {
   changeWord();
   setInterval(changeWord, 3000);
 
-  // Functions for animation
-
+  //! Functions for animation
   function changeWord() {
     const currentWord = wordArr[currentWordIndex];
     const nextWord =
@@ -31,10 +28,8 @@ export const headerAnimation = () => {
 
     // Take in next letters
     for (let i = 0; i < nextWord.length; i++) {
-      $(nextWord[i]).attr("class", "letter behind");
-      $(nextWord[0])
-        .parent()
-        .css("opacity", 1);
+      nextWord[i].className = "letter behind";
+      nextWord[0].parentElement.style.opacity = 1;
       animateLetterIn(nextWord, i);
     }
 
@@ -45,27 +40,30 @@ export const headerAnimation = () => {
 
   function animateLetterOut(currentWord, i) {
     setTimeout(function() {
-      $(currentWord[i]).attr("class", "letter out");
+      currentWord[i].className = "letter out";
     }, i * 80);
   }
 
   function animateLetterIn(nextWord, i) {
     setTimeout(function() {
-      $(nextWord[i]).attr("class", "letter in");
+      nextWord[i].className = "letter in";
     }, 340 + i * 80);
   }
 
   function splitLetters(word) {
-    const content = $(word).text();
+    const content = word.textContent;
 
-    $(word).text("");
+    word.innerText = "";
     let letters = [];
 
     for (let i = 0; i < content.length; i++) {
-      const $letter = $("<span>");
-      $letter.addClass("letter").text(content.charAt(i));
-      $(word).append($letter);
-      letters.push($letter.get()[0]);
+      const letter = document.createElement("span");
+
+      letter.classList.add("letter");
+      letter.innerText = content.charAt(i);
+
+      word.appendChild(letter);
+      letters.push(letter);
     }
 
     wordArr.push(letters);

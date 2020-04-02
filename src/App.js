@@ -32,14 +32,12 @@ function App() {
     const eduOffsetTop = eduRef.current.offsetTop;
     const contactOffsetTop = contactRef.current.offsetTop;
 
-    console.log(
-      `onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${aboutOffsetTop}`
-    );
+    // console.log(
+    //   `onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${aboutOffsetTop}`
+    // );
 
     //* Follow scroll and set current menu state
     if (scrollY >= aboutOffsetTop && scrollY < skillOffsetTop) {
-      console.log("hello????");
-
       setCurrentMenu("about");
     } else if (scrollY >= skillOffsetTop && scrollY < projOffsetTop) {
       setCurrentMenu("skill");
@@ -56,10 +54,8 @@ function App() {
     //* Hide / show sidenav
     // if scroll down below header
     if (scrollY - aboutOffsetTop >= 0) {
-      console.log("show");
       setHiddenSideNav(false);
     } else {
-      console.log("hide");
       setHiddenSideNav(true);
     }
   };
@@ -71,8 +67,8 @@ function App() {
       const prevMenu = sidenavRef.current.querySelector(".currentMenu");
       if (prevMenu) {
         prevMenu.classList.remove("currentMenu");
-        console.log("🩸prev menu", prevMenu);
       }
+
       // Add style to current menu
       const menuToPaint = sidenavRef.current.querySelector(`.${currentMenu}`);
       menuToPaint.classList.add("currentMenu");
