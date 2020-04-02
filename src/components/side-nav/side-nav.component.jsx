@@ -1,29 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./side-nav.style.css";
-import { SideNav, SideNavItem, Button } from "react-materialize";
-
-// import { Waypoint } from "waypoints";
-// import $ from "jquery";
+import { SideNav, SideNavItem } from "react-materialize";
+import { currentMenu } from "../util/currentMenu";
 
 export const SideNavMenu = props => {
-  // $(".sidenav").attr("style", "display:none;");
-
-  // const [winWidth,setWinWidth] = useState($(window).width())
-  // const winWidth = $(window).width();
-
-  // useEffect(() => {
-  //   if ($(window).width() > 992) {
-  //     console.log("big");
-  //     $(".sidenav").attr("style", "display:none;");
-  //   }
-  // }, [winWidth]);
+  // const sidenavRef = useRef();
 
   return (
-    // <div style={{ display: "none" }}>
     <div
       style={{
         display: props.hidden ? "none" : "block"
       }}
+      // ref={sidenavRef}
     >
       <style>
         {`
@@ -39,6 +27,7 @@ export const SideNavMenu = props => {
         }}
         fixed={false}
         // trigger={<Button node="button">SIDE NAV DEMO</Button>}
+        // onClick={currentMenu(sidenavRef)}
       >
         <SideNavItem
           className="profile"
@@ -55,42 +44,48 @@ export const SideNavMenu = props => {
         <SideNavItem
           href="#anchor-about"
           icon="sentiment_very_satisfied"
-          className="waves-effect"
+          className="waves-effect about"
+          // id="about"
         >
           About
         </SideNavItem>
         <SideNavItem
           href="#anchor-skill"
           icon="equalizer"
-          className="waves-effect"
+          className="waves-effect skill"
+          // id="skill"
         >
           Skills
         </SideNavItem>
         <SideNavItem
           href="#anchor-project"
           icon="videogame_asset"
-          className="waves-effect"
+          className="waves-effect project"
+          // id="project"
         >
           Project
         </SideNavItem>
         <SideNavItem
           href="#anchor-experience"
           icon="work"
-          className="waves-effect"
+          className="waves-effect experience"
+          // id="experience"
         >
           Experience
         </SideNavItem>
         <SideNavItem
           href="#anchor-education"
           icon="school"
-          className="waves-effect"
+          className="waves-effect education"
+          // id="education"
         >
           Education
         </SideNavItem>
         <SideNavItem
           href="#anchor-contact"
           icon="email"
-          className="waves-effect"
+          className="waves-effect contact"
+          // id="contact"
         >
           Contact
         </SideNavItem>

@@ -32,3 +32,8 @@ nav,
     display: none;
   }
 }
+
+.currentMenu,
+.currentMenu * {
+  color: rgb(0, 162, 255) !important;
+}

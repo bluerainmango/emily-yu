@@ -5,7 +5,6 @@ export const ContactSlot = ({ icon, to }) => (
   <div className="contact-info">
     <p>
       <svg className="icon">
-        {console.log(icon)}
         <use href={sprite + "#" + icon} />
       </svg>
       {icon !== "icon-mobile" ? (

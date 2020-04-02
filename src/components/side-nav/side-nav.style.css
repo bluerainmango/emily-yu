@@ -25,6 +25,10 @@
   margin-top: 5px;
   height: 3px;
 }
+.currentMenu,
 .currentMenu * {
   color: rgb(0, 162, 255) !important;
+}
+.bye {
+  color: red;
 }
