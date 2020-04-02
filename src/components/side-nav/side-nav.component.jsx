@@ -1,17 +1,13 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./side-nav.style.css";
 import { SideNav, SideNavItem } from "react-materialize";
-import { currentMenu } from "../util/currentMenu";
 
 export const SideNavMenu = props => {
-  // const sidenavRef = useRef();
-
   return (
     <div
       style={{
         display: props.hidden ? "none" : "block"
       }}
-      // ref={sidenavRef}
     >
       <style>
         {`
@@ -26,16 +22,11 @@ export const SideNavMenu = props => {
           closeOnClick: true
         }}
         fixed={false}
-        // trigger={<Button node="button">SIDE NAV DEMO</Button>}
-        // onClick={currentMenu(sidenavRef)}
       >
         <SideNavItem
           className="profile"
           user={{
-            // background: { profileImg },
-            // background: "https://placeimg.com/640/480/tech",
             email: "bluerainmango@gmail.com",
-            // image: { profileImg },
             name: "Emily Yu"
           }}
           userView
@@ -45,7 +36,6 @@ export const SideNavMenu = props => {
           href="#anchor-about"
           icon="sentiment_very_satisfied"
           className="waves-effect about"
-          // id="about"
         >
           About
         </SideNavItem>
@@ -53,7 +43,6 @@ export const SideNavMenu = props => {
           href="#anchor-skill"
           icon="equalizer"
           className="waves-effect skill"
-          // id="skill"
         >
           Skills
         </SideNavItem>
@@ -61,7 +50,6 @@ export const SideNavMenu = props => {
           href="#anchor-project"
           icon="videogame_asset"
           className="waves-effect project"
-          // id="project"
         >
           Project
         </SideNavItem>
@@ -69,7 +57,6 @@ export const SideNavMenu = props => {
           href="#anchor-experience"
           icon="work"
           className="waves-effect experience"
-          // id="experience"
         >
           Experience
         </SideNavItem>
@@ -77,7 +64,6 @@ export const SideNavMenu = props => {
           href="#anchor-education"
           icon="school"
           className="waves-effect education"
-          // id="education"
         >
           Education
         </SideNavItem>
@@ -85,7 +71,6 @@ export const SideNavMenu = props => {
           href="#anchor-contact"
           icon="email"
           className="waves-effect contact"
-          // id="contact"
         >
           Contact
         </SideNavItem>

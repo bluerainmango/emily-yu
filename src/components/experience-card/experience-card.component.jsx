@@ -18,10 +18,10 @@ export const ExperienceCardLarge = () => (
         for your entry-level or junior developer? Contact and take this slot!
       </p>
       <div className="card-link margin-top-3">
-        <button className="play-btn" href="mailto:bluerainmango@gmail.com">
+        <a className="play-btn" href="mailto:bluerainmango@gmail.com">
           {/* <p className="valign-wrapper">Send Email</p> */}
           Send Email
-        </button>
+        </a>
         <a
           href="https://linkedin.com/in/bluerainmango"
           target="_blank"

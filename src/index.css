@@ -57,7 +57,7 @@ body {
   margin-bottom: 15rem;
 }
 blockquote {
-  border-left-color: rgb(0, 162, 255);
+  border-left-color: rgb(0, 162, 255) !important;
 }
 .line-height-m {
   line-height: 1.75;

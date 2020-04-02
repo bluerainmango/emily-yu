@@ -48,7 +48,7 @@ header {
   left: 50%;
   margin-left: -225px;
   height: 40px;
-  top: 50%;
+  top: 45%;
   margin-top: -20px;
   display: flex;
   /* justify-content: start; */
@@ -221,5 +221,19 @@ header p {
   }
   .section__container {
     max-width: 90%;
+  }
+  .text {
+    top: 38%;
+  }
+}
+
+/* Responsive - landscape */
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+  .header__intro--greet {
+    font-size: 3rem;
+  }
+  .text {
+    left: 58%;
+    top: 35%;
   }
 }

@@ -1,17 +1,13 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./top-nav.style.css";
 
 import { NavItem, Navbar, Icon } from "react-materialize";
 // import NavItem from "react-materialize/lib/NavItem";
-import { currentMenu } from "../util/currentMenu";
 
 export const TopNav = props => {
-  // const topnavRef = useRef();
-
   return (
     <div>
       <Navbar
-        // onClick={currentMenu(topnavRef)}
         alignLinks="right"
         brand={
           <p className="brand-logo" href="#">

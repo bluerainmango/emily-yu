@@ -1,9 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./App.css";
 
-// import $ from "jquery";
-// import { Waypoint } from "react-waypoint";
-
 import Header from "./components/header/header.component";
 import { About } from "./components/about/about.component";
 import { TopNav } from "./components/top-nav/top-nav.component";
@@ -24,9 +21,8 @@ function App() {
   const contactRef = useRef();
   const [hiddenSideNav, setHiddenSideNav] = useState(true);
   const [currentMenu, setCurrentMenu] = useState("");
-  // const [hiddenTopNav, setHiddenTopNav] = useState(true);
-  // const [sideNavTop, setSideNavTop] = useState(0);
 
+  //! Scroll event handler for sidenav's current menu indicator
   const handleOnScroll = () => {
     const scrollY = window.scrollY;
     const aboutOffsetTop = aboutRef.current.offsetTop;
@@ -40,7 +36,7 @@ function App() {
       `onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${aboutOffsetTop}`
     );
 
-    //! Scroll follower(show current menu section in sidenav)
+    //* Follow scroll and set current menu state
     if (scrollY >= aboutOffsetTop && scrollY < skillOffsetTop) {
       console.log("hello????");
 
@@ -57,20 +53,14 @@ function App() {
       setCurrentMenu("contact");
     }
 
-    // setCurrentMenu("about");
-    // const menu = sidenavRef.current.querySelector(`.${currentMenu}`);
-    // console.log(currentMenu, menu);
-
-    //! Hide / show sidenav
-    // if scroll down below main
+    //* Hide / show sidenav
+    // if scroll down below header
     if (scrollY - aboutOffsetTop >= 0) {
       console.log("show");
       setHiddenSideNav(false);
-      // setHiddenTopNav(false);
     } else {
       console.log("hide");
       setHiddenSideNav(true);
-      // setHiddenTopNav(true);
     }
   };
 
@@ -78,12 +68,12 @@ function App() {
   useEffect(() => {
     if (currentMenu) {
       // Remove prev menu highlight
-
       const prevMenu = sidenavRef.current.querySelector(".currentMenu");
       if (prevMenu) {
         prevMenu.classList.remove("currentMenu");
         console.log("🩸prev menu", prevMenu);
       }
+      // Add style to current menu
       const menuToPaint = sidenavRef.current.querySelector(`.${currentMenu}`);
       menuToPaint.classList.add("currentMenu");
     }
