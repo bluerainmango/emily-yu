@@ -1,6 +1,6 @@
 # Emily&acute;s Portfolio (React ver.)
 
-> Get to know about me!
+> Get to know about me!<br>
 > 🙈[Check out >>](https://emily-yu-portfolio.herokuapp.com/ "Portfolio")
 
 ### Hello from Emily :wink:
