@@ -83,6 +83,49 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const links = document.querySelectorAll("#sideNav a");
+
+    links.forEach((el) => {
+      el.addEventListener("click", function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+
+          const hash = this.hash;
+          window.location.hash = hash;
+
+          console.log(hash.slice(8));
+          let scrollTo;
+
+          switch (hash.slice(8)) {
+            case "about":
+              scrollTo = aboutRef.current.offsetTop;
+              break;
+            case "skill":
+              scrollTo = skillRef.current.offsetTop;
+              break;
+            case "project":
+              scrollTo = projRef.current.offsetTop;
+              break;
+            case "experience":
+              scrollTo = expRef.current.offsetTop;
+              break;
+            case "education":
+              scrollTo = eduRef.current.offsetTop;
+              break;
+            case "contact":
+              scrollTo = contactRef.current.offsetTop;
+              break;
+            default:
+              scrollTo = 0;
+          }
+
+          window.scroll({ top: scrollTo, behavior: "smooth" });
+        }
+      });
+    });
+  }, []);
+
   return (
     <div className="App">
       <TopNav />

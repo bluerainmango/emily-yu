@@ -65,6 +65,6 @@ blockquote {
 .no-max-height {
   max-height: none;
 }
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
