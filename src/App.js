@@ -84,9 +84,10 @@ function App() {
       // Add style to current menu
       const menuToPaint = sidenavRef.current.querySelector(`.${currentMenu}`);
       menuToPaint.classList.add("currentMenu");
+
+      // Change hash
+      window.location.hash = `#anchor-${currentMenu}`;
     }
-    //! change hash
-    window.location.hash = `#anchor-${currentMenu}`;
   }, [currentMenu]);
 
   //! [Clicked Menu] Smoothly scroll to the section when menu in side nav is clicked
