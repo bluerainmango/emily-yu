@@ -26,7 +26,7 @@ const Header = (props) => {
         <a
           className="downArrow bounce"
           href="#anchor-about"
-          // onClick={props.onClick}
+          onClick={props.onClick}
         >
           <p>Scroll Down</p>
           <Icon className="material-icons large">keyboard_arrow_down</Icon>

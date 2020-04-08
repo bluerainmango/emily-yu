@@ -36,7 +36,7 @@ function App() {
     const contactOffsetTop = contactRef.current.offsetTop;
 
     // console.log(
-    //   `🐹 onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${aboutOffsetTop}`
+    //   `🐹 onScroll, window.scrollY: ${scrollY} aboutRef.scrollTop: ${aboutOffsetTop}`
     // );
 
     //* Follow scroll and set current menu state
@@ -84,10 +84,9 @@ function App() {
       // Add style to current menu
       const menuToPaint = sidenavRef.current.querySelector(`.${currentMenu}`);
       menuToPaint.classList.add("currentMenu");
-
-      //! change hash
-      window.location.hash = `#anchor-${currentMenu}`;
     }
+    //! change hash
+    window.location.hash = `#anchor-${currentMenu}`;
   }, [currentMenu]);
 
   //! [Clicked Menu] Smoothly scroll to the section when menu in side nav is clicked
@@ -130,7 +129,9 @@ function App() {
   // Set clicked menu state
   const handleSetClickedMenu = (() => {
     return function (e) {
-      const hash = e.target.href.split("#")[1].slice(7);
+      // console.log("🥝 inside", e.target, e.target.closest("a"));
+
+      const hash = e.target.closest("a").href.split("#")[1].slice(7);
       setClickedMenu(hash);
     };
   })(setClickedMenu);
