@@ -5,6 +5,9 @@
   margin: 0 auto;
   position: relative;
 }
+.carousel-item .col {
+  padding: 0 !important;
+}
 
 .carousel {
   height: 75rem !important;

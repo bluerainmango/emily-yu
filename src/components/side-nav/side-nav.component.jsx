@@ -13,7 +13,7 @@ export const SideNavMenu = (props) => {
     <div
       style={{
         display: props.hidden ? "none" : "block",
-        "z-index": "99999 !important",
+        zIndex: "99999 !important",
       }}
     >
       <SideNav

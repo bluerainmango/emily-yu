@@ -30,6 +30,7 @@
   position: relative;
   box-shadow: 0px 0px 25px 3px rgba(0, 110, 255, 0.8);
 }
+
 .play-btn > p {
   height: 100%;
   text-align: center;
@@ -41,7 +42,10 @@
   background-color: rgb(68, 68, 68);
   color: #fff;
 }
-
+.card-link {
+  display: flex;
+  align-items: center;
+}
 .card-link a:not(:last-child) {
   margin-right: 5rem;
 }
@@ -163,14 +167,23 @@
   /* Experience, Education(text) */
   .card-content p,
   li,
-  .card-link {
+  .card-link:not(.card-reveal) {
     font-size: 1.3rem;
+    /* text-align: center; */
   }
   .card-link {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-title {
+    /* text-align: center; */
   }
   #experience {
     margin-bottom: 9rem;
+  }
+  .card-link a:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
   }
 }
