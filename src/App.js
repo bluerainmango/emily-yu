@@ -127,12 +127,20 @@ function App() {
     });
   }, [clickedMenu]);
 
+  // Set clicked menu state
+  const handleSetClickedMenu = (() => {
+    return function (e) {
+      const hash = e.target.href.split("#")[1].slice(7);
+      setClickedMenu(hash);
+    };
+  })(setClickedMenu);
+
   return (
     <div className="App">
-      <TopNav setClickedMenu={setClickedMenu} />
-      <Header />
+      <TopNav onClick={handleSetClickedMenu} />
+      <Header onClick={handleSetClickedMenu} />
       <div ref={sidenavRef}>
-        <SideNavMenu setClickedMenu={setClickedMenu} hidden={hiddenSideNav} />
+        <SideNavMenu onClick={handleSetClickedMenu} hidden={hiddenSideNav} />
       </div>
       <main>
         <div ref={aboutRef}>

@@ -5,7 +5,7 @@ import { Icon } from "react-materialize";
 import { headerAnimation } from "./header.util";
 import "./header.style.css";
 
-const Header = () => {
+const Header = (props) => {
   useEffect(() => {
     headerAnimation();
   }, []);
@@ -23,8 +23,12 @@ const Header = () => {
           </p>
         </div>
 
-        <a className="downArrow bounce" href="#anchor-about">
-          <p>Click or Scroll</p>
+        <a
+          className="downArrow bounce"
+          href="#anchor-about"
+          // onClick={props.onClick}
+        >
+          <p>Scroll Down</p>
           <Icon className="material-icons large">keyboard_arrow_down</Icon>
         </a>
       </div>

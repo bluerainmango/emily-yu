@@ -6,10 +6,10 @@ import { NavItem, Navbar, Icon } from "react-materialize";
 
 export const TopNav = (props) => {
   // Set clicked menu state
-  const handleSetClickedMenu = (e) => {
-    const hash = e.target.href.split("#")[1].slice(7);
-    props.setClickedMenu(hash);
-  };
+  // const handleSetClickedMenu = (e) => {
+  //   const hash = e.target.href.split("#")[1].slice(7);
+  //   props.setClickedMenu(hash);
+  // };
 
   return (
     <div>
@@ -43,7 +43,7 @@ export const TopNav = (props) => {
         </NavItem>
         <div className="divider" />
         <NavItem
-          onClick={handleSetClickedMenu}
+          onClick={props.onClick}
           href="#anchor-about"
           className="waves-effect sidenav-close"
         >
@@ -51,7 +51,7 @@ export const TopNav = (props) => {
           About
         </NavItem>
         <NavItem
-          onClick={handleSetClickedMenu}
+          onClick={props.onClick}
           href="#anchor-skill"
           className="waves-effect sidenav-close"
         >
@@ -59,7 +59,7 @@ export const TopNav = (props) => {
           Skills
         </NavItem>
         <NavItem
-          onClick={handleSetClickedMenu}
+          onClick={props.onClick}
           href="#anchor-experience"
           className="waves-effect sidenav-close"
         >
@@ -67,7 +67,7 @@ export const TopNav = (props) => {
           Experience
         </NavItem>
         <NavItem
-          onClick={handleSetClickedMenu}
+          onClick={props.onClick}
           href="#anchor-education"
           className="waves-effect sidenav-close"
         >
@@ -75,7 +75,7 @@ export const TopNav = (props) => {
           Education
         </NavItem>
         <NavItem
-          onClick={handleSetClickedMenu}
+          onClick={props.onClick}
           href="#anchor-contact"
           className="waves-effect sidenav-close"
         >
