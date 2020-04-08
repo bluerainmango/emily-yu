@@ -3,10 +3,11 @@ import "materialize-css";
 // import { H2 } from "react-materialize";
 import "./about.style.css";
 
-export const About = () => {
+export const About = (props) => {
   return (
     <section id="about" className="scrollFollower">
-      <span className="anchor" id="anchor-about"></span>
+      <span className="anchor"></span>
+      {/* <span className="anchor" id="anchor-about"></span> */}
       <h2 className="section__header">ABOUT</h2>
 
       <div className="section__container">

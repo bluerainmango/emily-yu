@@ -2,13 +2,20 @@ import React from "react";
 import "./side-nav.style.css";
 import { SideNav, SideNavItem } from "react-materialize";
 
-export const SideNavMenu = props => {
+export const SideNavMenu = (props) => {
+  const handleSetClickedMenu = (e) => {
+    const hash = e.target.href.split("#")[1].slice(7);
+    props.setClickedMenu(hash);
+    console.log("🔮clicked link", hash);
+  };
+
   return (
     <div
       style={{
-        display: props.hidden ? "none" : "block"
+        display: props.hidden ? "none" : "block",
       }}
     >
+      {console.log(props)}
       <style>
         {`
                 #root > div > div {
@@ -19,7 +26,7 @@ export const SideNavMenu = props => {
       <SideNav
         id="sideNav"
         options={{
-          closeOnClick: true
+          closeOnClick: true,
         }}
         fixed={false}
       >
@@ -27,7 +34,7 @@ export const SideNavMenu = props => {
           className="profile"
           user={{
             email: "bluerainmango@gmail.com",
-            name: "Emily Yu"
+            name: "Emily Yu",
           }}
           userView
         />
@@ -36,6 +43,7 @@ export const SideNavMenu = props => {
           href="#anchor-about"
           icon="sentiment_very_satisfied"
           className="waves-effect about"
+          onClick={handleSetClickedMenu}
         >
           About
         </SideNavItem>
@@ -43,6 +51,7 @@ export const SideNavMenu = props => {
           href="#anchor-skill"
           icon="equalizer"
           className="waves-effect skill"
+          onClick={handleSetClickedMenu}
         >
           Skills
         </SideNavItem>
@@ -50,6 +59,7 @@ export const SideNavMenu = props => {
           href="#anchor-project"
           icon="videogame_asset"
           className="waves-effect project"
+          onClick={handleSetClickedMenu}
         >
           Project
         </SideNavItem>
@@ -57,6 +67,7 @@ export const SideNavMenu = props => {
           href="#anchor-experience"
           icon="work"
           className="waves-effect experience"
+          onClick={handleSetClickedMenu}
         >
           Experience
         </SideNavItem>
@@ -64,6 +75,7 @@ export const SideNavMenu = props => {
           href="#anchor-education"
           icon="school"
           className="waves-effect education"
+          onClick={handleSetClickedMenu}
         >
           Education
         </SideNavItem>
@@ -71,6 +83,7 @@ export const SideNavMenu = props => {
           href="#anchor-contact"
           icon="email"
           className="waves-effect contact"
+          onClick={handleSetClickedMenu}
         >
           Contact
         </SideNavItem>

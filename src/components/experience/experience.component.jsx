@@ -3,7 +3,7 @@ import React from "react";
 import { Row, Col } from "react-materialize";
 import {
   ExperienceCardLarge,
-  ExperienceCardSmall
+  ExperienceCardSmall,
 } from "../experience-card/experience-card.component";
 
 import { experienceData } from "./experience.data";
@@ -13,7 +13,8 @@ import "./experience.style.css";
 export const Experience = () => {
   return (
     <section id="experience" className="scrollFollower">
-      <span className="anchor" id="anchor-experience"></span>
+      <span className="anchor"></span>
+      {/* <span className="anchor" id="anchor-experience"></span> */}
       <h2 className="section__header">EXPERIENCE</h2>
       <div className="section__container">
         <h3>
@@ -29,7 +30,7 @@ export const Experience = () => {
         </Row>
 
         <Row>
-          {experienceData.map(experience => (
+          {experienceData.map((experience) => (
             <Col s={12} m={6} key={experience.company}>
               <ExperienceCardSmall key={experience.company} {...experience} />
             </Col>

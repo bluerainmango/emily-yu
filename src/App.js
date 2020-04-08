@@ -10,6 +10,8 @@ import { Project } from "./components/project/project.component";
 import { Experience } from "./components/experience/experience.component";
 import { Education } from "./components/education/education.component";
 import { Contact } from "./components/contact/contact.component";
+import smoothscroll from "smoothscroll-polyfill";
+smoothscroll.polyfill();
 
 function App() {
   const sidenavRef = useRef();
@@ -21,6 +23,7 @@ function App() {
   const contactRef = useRef();
   const [hiddenSideNav, setHiddenSideNav] = useState(true);
   const [currentMenu, setCurrentMenu] = useState("");
+  const [clickedMenu, setClickedMenu] = useState("");
 
   //! Scroll event handler for sidenav's current menu indicator
   const handleOnScroll = () => {
@@ -72,6 +75,9 @@ function App() {
       // Add style to current menu
       const menuToPaint = sidenavRef.current.querySelector(`.${currentMenu}`);
       menuToPaint.classList.add("currentMenu");
+
+      //! change hash
+      window.location.hash = `#anchor-${currentMenu}`;
     }
   }, [currentMenu]);
 
@@ -83,47 +89,80 @@ function App() {
     };
   }, []);
 
+  // const handleOnClickLink = function (e) {
+  //   setClickedMenu(e.target.href);
+  // };
+
   useEffect(() => {
-    const links = document.querySelectorAll("#sideNav a");
+    console.log("🦊 state's clickedMenu: ", clickedMenu);
+    // window.location.hash = clickedMenu;
 
-    links.forEach((el) => {
-      el.addEventListener("click", function (e) {
-        if (this.hash !== "") {
-          e.preventDefault();
+    let scrollTo;
+    switch (clickedMenu) {
+      case "about":
+        scrollTo = aboutRef.current.offsetTop;
 
-          const hash = this.hash;
-          window.location.hash = hash;
+        break;
+      case "skill":
+        scrollTo = skillRef.current.offsetTop;
+        break;
+      case "project":
+        scrollTo = projRef.current.offsetTop;
+        break;
+      case "experience":
+        scrollTo = expRef.current.offsetTop;
+        break;
+      case "education":
+        scrollTo = eduRef.current.offsetTop;
+        break;
+      case "contact":
+        scrollTo = contactRef.current.offsetTop;
+        break;
+      default:
+        scrollTo = 0;
+    }
 
-          console.log(hash.slice(8));
-          let scrollTo;
+    console.log("scroll to", scrollTo);
 
-          switch (hash.slice(8)) {
-            case "about":
-              scrollTo = aboutRef.current.offsetTop;
-              break;
-            case "skill":
-              scrollTo = skillRef.current.offsetTop;
-              break;
-            case "project":
-              scrollTo = projRef.current.offsetTop;
-              break;
-            case "experience":
-              scrollTo = expRef.current.offsetTop;
-              break;
-            case "education":
-              scrollTo = eduRef.current.offsetTop;
-              break;
-            case "contact":
-              scrollTo = contactRef.current.offsetTop;
-              break;
-            default:
-              scrollTo = 0;
-          }
+    window.scroll({ top: scrollTo, behavior: "smooth" });
+  }, [clickedMenu]);
 
-          window.scroll({ top: scrollTo, behavior: "smooth" });
-        }
-      });
-    });
+  useEffect(() => {
+    // const links = document.querySelectorAll("#sideNav a");
+    // links.forEach((el) => {
+    //   el.addEventListener("click", function (e) {
+    //     if (this.hash !== "") {
+    //       e.preventDefault();
+    //       const hash = this.hash;
+    //       window.location.hash = hash;
+    //       console.log(hash.slice(8));
+    //       let scrollTo;
+    //       switch (hash.slice(8)) {
+    //         case "about":
+    //           scrollTo = aboutRef.current.offsetTop;
+    //           break;
+    //         case "skill":
+    //           scrollTo = skillRef.current.offsetTop;
+    //           break;
+    //         case "project":
+    //           scrollTo = projRef.current.offsetTop;
+    //           break;
+    //         case "experience":
+    //           scrollTo = expRef.current.offsetTop;
+    //           break;
+    //         case "education":
+    //           scrollTo = eduRef.current.offsetTop;
+    //           break;
+    //         case "contact":
+    //           scrollTo = contactRef.current.offsetTop;
+    //           break;
+    //         default:
+    //           scrollTo = 0;
+    //       }
+    //       window.scroll({ top: scrollTo, behavior: "smooth" });
+    //     }
+    //   });
+    // });
   }, []);
 
   return (
@@ -131,7 +170,7 @@ function App() {
       <TopNav />
       <Header />
       <div ref={sidenavRef}>
-        <SideNavMenu hidden={hiddenSideNav} />
+        <SideNavMenu setClickedMenu={setClickedMenu} hidden={hiddenSideNav} />
       </div>
       <main>
         <div ref={aboutRef}>

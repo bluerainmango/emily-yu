@@ -9,7 +9,8 @@ import "./project.style.css";
 export const Project = () => {
   return (
     <section id="project" className="scrollFollower">
-      <span className="anchor" id="anchor-project"></span>
+      <span className="anchor"></span>
+      {/* <span className="anchor" id="anchor-project"></span> */}
       <h2 className="section__header">PROJECTS</h2>
       <div className="section__container section__container--project">
         <h3>
@@ -29,10 +30,10 @@ export const Project = () => {
             numVisible: 5,
             onCycleTo: null,
             padding: 0,
-            shift: 0
+            shift: 0,
           }}
         >
-          {projectData.map(proj => (
+          {projectData.map((proj) => (
             <Row key={proj.title}>
               <ProjectCard proj={proj} />
             </Row>

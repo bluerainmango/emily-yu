@@ -26,7 +26,8 @@ import "./skill.style.css";
 export const Skill = () => {
   return (
     <section id="skill" className="scrollFollower">
-      <span className="anchor" id="anchor-skill"></span>
+      <span className="anchor"></span>
+      {/* <span className="anchor" id="anchor-skill"></span> */}
       <h2 className="section__header">SKILLS</h2>
       <div className="section__container">
         <h3>
