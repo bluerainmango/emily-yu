@@ -25,7 +25,7 @@ function App() {
   const [currentMenu, setCurrentMenu] = useState("");
   const [clickedMenu, setClickedMenu] = useState("");
 
-  //! Scroll event handler for sidenav's current menu indicator
+  //! Scroll event handler for sidenav(current menu indicator + hide/show)
   const handleOnScroll = () => {
     const scrollY = window.scrollY;
     const aboutOffsetTop = aboutRef.current.offsetTop;
@@ -36,7 +36,7 @@ function App() {
     const contactOffsetTop = contactRef.current.offsetTop;
 
     // console.log(
-    //   `onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${aboutOffsetTop}`
+    //   `🐹 onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${aboutOffsetTop}`
     // );
 
     //* Follow scroll and set current menu state
@@ -63,7 +63,16 @@ function App() {
     }
   };
 
-  //! Indicate current menu in side nav
+  //! [Init] Attach window scroll event handler
+  // React comp's onScroll is not working since it's window not DOM?
+  useEffect(() => {
+    window.addEventListener("scroll", handleOnScroll);
+    return () => {
+      window.removeEventListener("scroll", handleOnScroll);
+    };
+  }, []);
+
+  //! [Current Menu] Indicate current menu in side nav
   useEffect(() => {
     if (currentMenu) {
       // Remove prev menu highlight
@@ -81,21 +90,9 @@ function App() {
     }
   }, [currentMenu]);
 
-  //! Attach scroll event handler
-  useEffect(() => {
-    window.addEventListener("scroll", handleOnScroll);
-    return () => {
-      window.removeEventListener("scroll", handleOnScroll);
-    };
-  }, []);
-
-  // const handleOnClickLink = function (e) {
-  //   setClickedMenu(e.target.href);
-  // };
-
+  //! [Clicked Menu] Smoothly scroll to the section when menu in side nav is clicked
   useEffect(() => {
     console.log("🦊 state's clickedMenu: ", clickedMenu);
-    // window.location.hash = clickedMenu;
 
     let scrollTo;
     switch (clickedMenu) {
@@ -129,44 +126,6 @@ function App() {
       behavior: "smooth",
     });
   }, [clickedMenu]);
-
-  useEffect(() => {
-    // const links = document.querySelectorAll("#sideNav a");
-    // links.forEach((el) => {
-    //   el.addEventListener("click", function (e) {
-    //     if (this.hash !== "") {
-    //       e.preventDefault();
-    //       const hash = this.hash;
-    //       window.location.hash = hash;
-    //       console.log(hash.slice(8));
-    //       let scrollTo;
-    //       switch (hash.slice(8)) {
-    //         case "about":
-    //           scrollTo = aboutRef.current.offsetTop;
-    //           break;
-    //         case "skill":
-    //           scrollTo = skillRef.current.offsetTop;
-    //           break;
-    //         case "project":
-    //           scrollTo = projRef.current.offsetTop;
-    //           break;
-    //         case "experience":
-    //           scrollTo = expRef.current.offsetTop;
-    //           break;
-    //         case "education":
-    //           scrollTo = eduRef.current.offsetTop;
-    //           break;
-    //         case "contact":
-    //           scrollTo = contactRef.current.offsetTop;
-    //           break;
-    //         default:
-    //           scrollTo = 0;
-    //       }
-    //       window.scroll({ top: scrollTo, behavior: "smooth" });
-    //     }
-    //   });
-    // });
-  }, []);
 
   return (
     <div className="App">

@@ -3,26 +3,19 @@ import "./side-nav.style.css";
 import { SideNav, SideNavItem } from "react-materialize";
 
 export const SideNavMenu = (props) => {
+  // Set clicked menu state
   const handleSetClickedMenu = (e) => {
     const hash = e.target.href.split("#")[1].slice(7);
     props.setClickedMenu(hash);
-    console.log("🔮clicked link", hash);
   };
 
   return (
     <div
       style={{
         display: props.hidden ? "none" : "block",
+        "z-index": "99999 !important",
       }}
     >
-      {console.log(props)}
-      <style>
-        {`
-                #root > div > div {
-                  z-index: 99999 !important;
-                }
-              `}
-      </style>
       <SideNav
         id="sideNav"
         options={{

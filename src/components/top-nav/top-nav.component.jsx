@@ -5,10 +5,10 @@ import { NavItem, Navbar, Icon } from "react-materialize";
 // import NavItem from "react-materialize/lib/NavItem";
 
 export const TopNav = (props) => {
+  // Set clicked menu state
   const handleSetClickedMenu = (e) => {
     const hash = e.target.href.split("#")[1].slice(7);
     props.setClickedMenu(hash);
-    console.log("🔮clicked link", hash);
   };
 
   return (
