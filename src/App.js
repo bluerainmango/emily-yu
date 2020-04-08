@@ -101,7 +101,6 @@ function App() {
     switch (clickedMenu) {
       case "about":
         scrollTo = aboutRef.current.offsetTop;
-
         break;
       case "skill":
         scrollTo = skillRef.current.offsetTop;
@@ -122,9 +121,13 @@ function App() {
         scrollTo = 0;
     }
 
-    console.log("scroll to", scrollTo);
+    console.log("🐷scroll to", scrollTo, "window width:", window.innerWidth);
 
-    window.scroll({ top: scrollTo, behavior: "smooth" });
+    //* Scroll to section (56: mobile/tablet top bar height)
+    window.scroll({
+      top: window.innerWidth > 992 ? scrollTo : scrollTo - 56,
+      behavior: "smooth",
+    });
   }, [clickedMenu]);
 
   useEffect(() => {
@@ -167,7 +170,7 @@ function App() {
 
   return (
     <div className="App">
-      <TopNav />
+      <TopNav setClickedMenu={setClickedMenu} />
       <Header />
       <div ref={sidenavRef}>
         <SideNavMenu setClickedMenu={setClickedMenu} hidden={hiddenSideNav} />
