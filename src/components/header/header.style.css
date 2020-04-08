@@ -223,7 +223,10 @@ header p {
     max-width: 90%;
   }
   .text {
-    top: 38%;
+    top: 35%;
+  }
+  .downArrow {
+    bottom: 16rem;
   }
 }
 
@@ -234,6 +237,9 @@ header p {
   }
   .text {
     left: 58%;
-    top: 35%;
+    top: 30%;
+  }
+  .downArrow {
+    bottom: 9rem;
   }
 }
