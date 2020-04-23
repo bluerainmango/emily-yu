@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff76caeb4e222fa0472cf415e73ec2fe",
+    "revision": "d6143c60c4395f08d25433067bccaea4",
     "url": "/index.html"
   },
   {
-    "revision": "594f73f8082b064cb128",
+    "revision": "dfb05a459269673264fe",
     "url": "/static/css/2.5a510433.chunk.css"
   },
   {
-    "revision": "99ef6d6cf0a35dc9229b",
-    "url": "/static/css/main.35afcc26.chunk.css"
+    "revision": "d429cd2be5b1bfe80862",
+    "url": "/static/css/main.401e121e.chunk.css"
   },
   {
-    "revision": "594f73f8082b064cb128",
-    "url": "/static/js/2.cd306a91.chunk.js"
+    "revision": "dfb05a459269673264fe",
+    "url": "/static/js/2.cc793c10.chunk.js"
   },
   {
     "revision": "d0b30a1909a753c393e134caf98fa9bb",
-    "url": "/static/js/2.cd306a91.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.cc793c10.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "99ef6d6cf0a35dc9229b",
-    "url": "/static/js/main.e9587776.chunk.js"
+    "revision": "d429cd2be5b1bfe80862",
+    "url": "/static/js/main.4c550265.chunk.js"
   },
   {
     "revision": "5284eec07972ace79c95",
@@ -64,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/html5.88225dbd.png"
   },
   {
-    "revision": "ed7319af2bb6ed6abfb4b02a6d39b85e",
-    "url": "/static/media/jquery.ed7319af.png"
+    "revision": "e849d7b15441fd03fd4692feb02d38fc",
+    "url": "/static/media/jquery.e849d7b1.png"
   },
   {
     "revision": "7f025be029deb96a258cc5c6d577aab9",
@@ -78,6 +78,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6fca776ef7f142dbe042bc4ebb4ff9ce",
     "url": "/static/media/mongodb.6fca776e.png"
+  },
+  {
+    "revision": "7d08c7995fb6d69588147ee1d212387b",
+    "url": "/static/media/mongoose.7d08c799.jpg"
   },
   {
     "revision": "c266e5d3e5344a9fb70ac57095321e11",
@@ -144,8 +148,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/proj_workout.5bbeda18.gif"
   },
   {
-    "revision": "616730d1d76150d05e94cb11b31d2b57",
-    "url": "/static/media/react.616730d1.png"
+    "revision": "4db881d6c9d2392dfa2d31f53c7f388f",
+    "url": "/static/media/react.4db881d6.jpg"
+  },
+  {
+    "revision": "0f41ddb9823a497b56303d742a01f9d2",
+    "url": "/static/media/redux.0f41ddb9.png"
   },
   {
     "revision": "4d8c072680d7be0d0514f33e91533107",
