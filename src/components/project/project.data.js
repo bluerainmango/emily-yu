@@ -15,27 +15,27 @@ import projDirectory from "../../assets/img/proj_directory.gif";
 export const projectData = [
   {
     title: "Movie Map",
-    linkDeploy: "https://gentle-savannah-70403.herokuapp.com/",
-    linkRepo: "https://github.com/fguzmanrs/reimagined-results",
+    linkDeploy: "https://movie-map.herokuapp.com/",
+    linkRepo: "https://github.com/fguzmanrs/movieMap2",
     image: projMovieMap,
     type: "Team",
     role:
-      "Role: Backend(RESTful APIs, Authentication - JWT & Cookie, Error Handling), Client-side rendering(except styling, design)",
+      "**Currently working project(Final demo: Apr. 30th) Role: Back-end(RESTful APIs, Authentication - JWT & Cookie, Error Handling), Front-end(React except css styling, design)",
     description:
       "The app has been created to help film buffs who want targeted movie reccomendatios and the information and resources to watch their finds.",
     tech: [
+      "React",
       "Node.js",
-      "MySQL",
-      "Sequelize",
+      "MongoDB",
+      "Express",
       "JWT",
       "Cookie",
       "Javascript",
-      "jQuery",
-      "Materialize",
+      "Material-UI",
       "HTML",
       "CSS",
-      "Heroku"
-    ]
+      "Heroku",
+    ],
   },
   {
     title: "Workout Tracker",
@@ -55,8 +55,8 @@ export const projectData = [
       "CSS",
       "Materialize",
       "HTML",
-      "Heroku"
-    ]
+      "Heroku",
+    ],
   },
   {
     title: "Employee Directory",
@@ -74,8 +74,8 @@ export const projectData = [
       "JavaScript",
       "CSS",
       "HTML",
-      "Heroku"
-    ]
+      "Heroku",
+    ],
   },
   {
     title: "PWA Budget Tracker",
@@ -94,8 +94,8 @@ export const projectData = [
       "Express",
       "JavaScript",
       "HTML",
-      "Heroku"
-    ]
+      "Heroku",
+    ],
   },
   {
     title: "Eclectic Kitchen",
@@ -114,8 +114,8 @@ export const projectData = [
       "jQuery",
       "Materialize",
       "AJAX",
-      "API-Spoonacular"
-    ]
+      "API-Spoonacular",
+    ],
   },
   {
     title: "HR Tracker",
@@ -126,7 +126,7 @@ export const projectData = [
     role: "",
     description:
       "CMS(Content Management System) for Human Resource. Manage the departments, roles and employees in companies to keep track of current business situation.",
-    tech: ["MySQL", "Node.js", "Express"]
+    tech: ["MySQL", "Node.js", "Express"],
   },
   {
     title: "Yummy Burger",
@@ -146,8 +146,8 @@ export const projectData = [
       "JavaScript",
       "CSS",
       "HTML",
-      "Heroku"
-    ]
+      "Heroku",
+    ],
   },
   {
     title: "Team Profile Generator",
@@ -158,7 +158,7 @@ export const projectData = [
     role: "",
     description:
       "Quick and easy Node CLI generating a software engineering team profile. As a team member or manager, you can simply create a team profile including all members basic info, so that you can easily access to their emails and GitHub profiles.",
-    tech: ["Node.js", "Express", "Jest", "OOP"]
+    tech: ["Node.js", "Express", "Jest", "OOP"],
   },
   {
     title: "Github Profile Generator",
@@ -169,7 +169,7 @@ export const projectData = [
     role: "",
     description:
       "A command-line app that generates a Github profile in PDF format from a username. Quickly generate a profile by providing a Github username and save it as a document so that you can easily prepare for meetings, reports, stakeholders etc.",
-    tech: ["Node.js", "Express"]
+    tech: ["Node.js", "Express"],
   },
   {
     title: "Weather Dashboard",
@@ -187,8 +187,8 @@ export const projectData = [
       "jQuery",
       "Bootstrap",
       "AJAX",
-      "API-Open Weather"
-    ]
+      "API-Open Weather",
+    ],
   },
   {
     title: "New York Times Search",
@@ -205,8 +205,8 @@ export const projectData = [
       "jQuery",
       "Bootstrap",
       "AJAX",
-      "API-New York Times"
-    ]
+      "API-New York Times",
+    ],
   },
   {
     title: "Password Generator",
@@ -216,7 +216,7 @@ export const projectData = [
     type: "Indv",
     role: "",
     description: "Generate a strong password that meets your own criteria.",
-    tech: ["HTML", "CSS", "JavaScript"]
+    tech: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "Daily Planner",
@@ -227,6 +227,6 @@ export const projectData = [
     role: "",
     description:
       "Manage your work quick & easy! Individuals can save a to-do list so that they can effectively achieve their hourly & daily goals.",
-    tech: ["HTML", "CSS", "JavaScript", "jQuery", "API-Moment"]
-  }
+    tech: ["HTML", "CSS", "JavaScript", "jQuery", "API-Moment"],
+  },
 ];
