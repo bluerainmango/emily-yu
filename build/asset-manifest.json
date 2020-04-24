@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.401e121e.chunk.css",
-    "main.js": "/static/js/main.4c550265.chunk.js",
-    "main.js.map": "/static/js/main.4c550265.chunk.js.map",
+    "main.js": "/static/js/main.baefc66e.chunk.js",
+    "main.js.map": "/static/js/main.baefc66e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ceaf4b5f.js",
     "runtime-main.js.map": "/static/js/runtime-main.ceaf4b5f.js.map",
     "static/css/2.5a510433.chunk.css": "/static/css/2.5a510433.chunk.css",
-    "static/js/2.cc793c10.chunk.js": "/static/js/2.cc793c10.chunk.js",
-    "static/js/2.cc793c10.chunk.js.map": "/static/js/2.cc793c10.chunk.js.map",
+    "static/js/2.ffd33610.chunk.js": "/static/js/2.ffd33610.chunk.js",
+    "static/js/2.ffd33610.chunk.js.map": "/static/js/2.ffd33610.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e54b58d3092f6688fa8269ad426c1b83.js": "/precache-manifest.e54b58d3092f6688fa8269ad426c1b83.js",
+    "precache-manifest.138cf0ef25240ceae3031ff32746c855.js": "/precache-manifest.138cf0ef25240ceae3031ff32746c855.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.5a510433.chunk.css.map": "/static/css/2.5a510433.chunk.css.map",
     "static/css/main.401e121e.chunk.css.map": "/static/css/main.401e121e.chunk.css.map",
-    "static/js/2.cc793c10.chunk.js.LICENSE.txt": "/static/js/2.cc793c10.chunk.js.LICENSE.txt",
+    "static/js/2.ffd33610.chunk.js.LICENSE.txt": "/static/js/2.ffd33610.chunk.js.LICENSE.txt",
     "static/media/adam.png": "/static/media/adam.ce7aafb1.png",
     "static/media/andy.jpeg": "/static/media/andy.f84c9c8a.jpeg",
     "static/media/bootstrap.png": "/static/media/bootstrap.22e6fce3.png",
@@ -34,6 +34,7 @@
     "static/media/proj_budget.gif": "/static/media/proj_budget.7aa3e469.gif",
     "static/media/proj_burger.gif": "/static/media/proj_burger.19e4a4d3.gif",
     "static/media/proj_directory.gif": "/static/media/proj_directory.2b3ff1a9.gif",
+    "static/media/proj_googlebooks.gif": "/static/media/proj_googlebooks.3b29791c.gif",
     "static/media/proj_hr.gif": "/static/media/proj_hr.b323fd9a.gif",
     "static/media/proj_kitchen.png": "/static/media/proj_kitchen.b76ea063.png",
     "static/media/proj_moviemap.gif": "/static/media/proj_moviemap.038c222a.gif",
@@ -57,8 +58,8 @@
   "entrypoints": [
     "static/js/runtime-main.ceaf4b5f.js",
     "static/css/2.5a510433.chunk.css",
-    "static/js/2.cc793c10.chunk.js",
+    "static/js/2.ffd33610.chunk.js",
     "static/css/main.401e121e.chunk.css",
-    "static/js/main.4c550265.chunk.js"
+    "static/js/main.baefc66e.chunk.js"
   ]
 }
