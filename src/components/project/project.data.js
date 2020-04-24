@@ -44,6 +44,7 @@ export const projectData = [
     linkRepo: "https://github.com/bluerainmango/google-book",
     image: projGoogleBooks,
     type: "Indv",
+    role: "",
     description:
       "Search and save your books so that you can read or purchase later.",
     tech: [
@@ -60,7 +61,7 @@ export const projectData = [
   },
   {
     title: "Workout Tracker",
-    linkDeploy: "https://desolate-brushlands-16007.herokuapp.com/",
+    linkDeploy: "https://workout-tracker-emily.herokuapp.com/",
     linkRepo: "https://github.com/bluerainmango/workout",
     image: projWorkout,
     type: "Indv",
