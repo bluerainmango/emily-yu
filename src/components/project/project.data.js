@@ -217,7 +217,7 @@ export const projectData = [
     linkDeploy: "https://bluerainmango.github.io/newYorkTimes/",
     linkRepo: "https://github.com/bluerainmango/newYorkTimes",
     image: projNewspaper,
-    type: "Indv",
+    type: "Team",
     role: "",
     description: "Quick & Easy to search New York Times articles.",
     tech: [
