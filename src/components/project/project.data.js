@@ -11,6 +11,7 @@ import projPlaner from "../../assets/img/proj_planner.gif";
 import projBudget from "../../assets/img/proj_budget.gif";
 import projWorkout from "../../assets/img/proj_workout.gif";
 import projDirectory from "../../assets/img/proj_directory.gif";
+import projGoogleBooks from "../../assets/img/proj_googlebooks.gif";
 
 export const projectData = [
   {
@@ -30,6 +31,26 @@ export const projectData = [
       "Express",
       "JWT",
       "Cookie",
+      "Javascript",
+      "Material-UI",
+      "HTML",
+      "CSS",
+      "Heroku",
+    ],
+  },
+  {
+    title: "Google Books Search",
+    linkDeploy: "https://react-google-books-emily.herokuapp.com/",
+    linkRepo: "https://github.com/bluerainmango/google-book",
+    image: projGoogleBooks,
+    type: "Indv",
+    description:
+      "Search and save your books so that you can read or purchase later.",
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
       "Javascript",
       "Material-UI",
       "HTML",
