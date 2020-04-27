@@ -81,7 +81,8 @@ export const SideNavMenu = (props) => {
           Contact
         </SideNavItem>
         <SideNavItem
-          href="https://raw.githubusercontent.com/bluerainmango/emilyYu/661e64e47ac1ac550cc454ce38acf29e0c8387fd/assets/resume_emilyYu.pdf"
+          // href="https://raw.githubusercontent.com/bluerainmango/emilyYu/661e64e47ac1ac550cc454ce38acf29e0c8387fd/assets/resume_emilyYu.pdf"
+          href="../../assets/resume-emily-yu.docx"
           target="_blank"
           icon="insert_drive_file"
           className="waves-effect"
