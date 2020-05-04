@@ -21,9 +21,9 @@ export const projectData = [
     image: projMovieMap,
     type: "Team",
     role:
-      "**Currently working project(Final demo: Apr. 30th) Role: Back-end(RESTful APIs, Authentication - JWT & Cookie, Error Handling), Front-end(React except css styling, design)",
+      "Role: Back-end(RESTful APIs, Authentication - JWT & Cookie, Error Handling), Front-end(React except css styling, design)",
     description:
-      "A MERN stack app has been created to help film buffs who want targeted movie reccomendatios and the information and resources to watch their finds.",
+      "A MERN stack app has been created to help film buffs who want targeted movie recommendations and the information and resources to watch their finds.",
     tech: [
       "React",
       "Node.js",

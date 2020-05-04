@@ -7,14 +7,15 @@ export const experienceData = [
     period: "Aug. 2015 - Mar.2019",
     links: [
       { url: "https://www.cailyncosmetics.com", name: "CAILYN Cosmetics" },
-      { url: "https://doubledarespa.com/", name: "Double Dare" }
+      { url: "https://doubledarespa.com/", name: "Double Dare" },
     ],
     works: [
+      "Launched a new brand’s website called double dare, and raised the revenue to 19 times for first month within 6 months.",
       "Created and operated SEO optimized websites through Shopify, Cafe24 and open cart web(Retail, Wholesale, Microsite).",
       "Analyzed web data and gathered insights for sales with Google Analytics, campaign tags and etc.",
       "Setup KPIs and built up strategies for online & eCommerce. Managed social media advertisements.",
-      "Setup and handled online platforms such as EDI, social commerce and online markets(Amazon Luxury & seller, Groupon, Ulta.com, Dillard’s, Bloomingdale’s)"
-    ]
+      "Setup and handled online platforms such as EDI, social commerce and online markets(Amazon Luxury & seller, Groupon, Ulta.com, Dillard’s, Bloomingdale’s)",
+    ],
   },
   {
     title: "Online Marketer & PR Coordinator",
@@ -25,7 +26,7 @@ export const experienceData = [
     works: [
       "Planned and developed online content and e-learning systems.",
       "Operated website (www.hackers.co.kr) and mobile apps.",
-      "In charge of PR and managed online media and press."
-    ]
-  }
+      "In charge of PR and managed online media and press.",
+    ],
+  },
 ];
