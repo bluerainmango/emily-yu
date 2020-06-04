@@ -25,10 +25,10 @@ export const SideNavMenu = (props) => {
       >
         <SideNavItem
           className="profile"
-          user={{
-            email: "emily.jiyeon.yu@gmail.com",
-            name: "Emily Yu",
-          }}
+          // user={{
+          //   email: "emily.jiyeon.yu@gmail.com",
+          //   name: "Emily Yu",
+          // }}
           userView
         />
         <SideNavItem divider />
@@ -83,7 +83,7 @@ export const SideNavMenu = (props) => {
         <SideNavItem
           href="https://github.com/bluerainmango/emily-yu/blob/master/src/assets/resume-emily-yu-graphic.pdf?raw=true"
           target="_blank"
-          icon="insert_drive_file"
+          icon="picture_as_pdf"
           className="waves-effect"
         >
           Resume(Graphic ver.)

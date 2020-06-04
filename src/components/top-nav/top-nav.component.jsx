@@ -38,8 +38,8 @@ export const TopNav = (props) => {
         }}
       >
         <NavItem id="profile-mobile">
-          <span>bluerainmango@gmail.com</span>
-          <span>Emily Yu</span>
+          {/* <span>bluerainmango@gmail.com</span>
+          <span>Emily Yu</span> */}
         </NavItem>
         <div className="divider" />
         <NavItem
@@ -87,7 +87,7 @@ export const TopNav = (props) => {
           target="_blank"
           className="waves-effect sidenav-close"
         >
-          <Icon>insert_drive_file</Icon>
+          <Icon>picture_as_pdf</Icon>
           Resume(Graphic ver.)
         </NavItem>
         <NavItem
