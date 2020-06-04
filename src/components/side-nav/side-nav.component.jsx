@@ -81,12 +81,20 @@ export const SideNavMenu = (props) => {
           Contact
         </SideNavItem>
         <SideNavItem
+          href="https://github.com/bluerainmango/emily-yu/blob/master/src/assets/resume-emily-yu-graphic.pdf?raw=true"
+          target="_blank"
+          icon="insert_drive_file"
+          className="waves-effect"
+        >
+          Resume(Graphic ver.)
+        </SideNavItem>
+        <SideNavItem
           href="https://github.com/bluerainmango/emily-yu/blob/master/src/assets/resume-emily-yu-ats.docx?raw=true"
           target="_blank"
           icon="insert_drive_file"
           className="waves-effect"
         >
-          Resume
+          Resume(ATS ver.)
         </SideNavItem>
       </SideNav>
     </div>
