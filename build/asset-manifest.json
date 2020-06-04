@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.401e121e.chunk.css",
-    "main.js": "/static/js/main.1ca6a6d1.chunk.js",
-    "main.js.map": "/static/js/main.1ca6a6d1.chunk.js.map",
+    "main.js": "/static/js/main.adebc649.chunk.js",
+    "main.js.map": "/static/js/main.adebc649.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ceaf4b5f.js",
     "runtime-main.js.map": "/static/js/runtime-main.ceaf4b5f.js.map",
     "static/css/2.5a510433.chunk.css": "/static/css/2.5a510433.chunk.css",
-    "static/js/2.ffd33610.chunk.js": "/static/js/2.ffd33610.chunk.js",
-    "static/js/2.ffd33610.chunk.js.map": "/static/js/2.ffd33610.chunk.js.map",
+    "static/js/2.2c33c1d4.chunk.js": "/static/js/2.2c33c1d4.chunk.js",
+    "static/js/2.2c33c1d4.chunk.js.map": "/static/js/2.2c33c1d4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e9491d6bda2eb96fc7ac3156a8b8c276.js": "/precache-manifest.e9491d6bda2eb96fc7ac3156a8b8c276.js",
+    "precache-manifest.fe8b28ffc03e9be79c60d11598ff0a55.js": "/precache-manifest.fe8b28ffc03e9be79c60d11598ff0a55.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.5a510433.chunk.css.map": "/static/css/2.5a510433.chunk.css.map",
     "static/css/main.401e121e.chunk.css.map": "/static/css/main.401e121e.chunk.css.map",
-    "static/js/2.ffd33610.chunk.js.LICENSE.txt": "/static/js/2.ffd33610.chunk.js.LICENSE.txt",
+    "static/js/2.2c33c1d4.chunk.js.LICENSE.txt": "/static/js/2.2c33c1d4.chunk.js.LICENSE.txt",
     "static/media/adam.png": "/static/media/adam.ce7aafb1.png",
     "static/media/andy.jpeg": "/static/media/andy.f84c9c8a.jpeg",
     "static/media/bootstrap.png": "/static/media/bootstrap.22e6fce3.png",
@@ -45,6 +45,7 @@
     "static/media/proj_teamProfile.gif": "/static/media/proj_teamProfile.18e8d004.gif",
     "static/media/proj_weather.gif": "/static/media/proj_weather.b6a86cf5.gif",
     "static/media/proj_workout.gif": "/static/media/proj_workout.5bbeda18.gif",
+    "static/media/puppeteer.jpg": "/static/media/puppeteer.d0406678.jpg",
     "static/media/react.jpg": "/static/media/react.4db881d6.jpg",
     "static/media/redux.png": "/static/media/redux.0f41ddb9.png",
     "static/media/sass.png": "/static/media/sass.4d8c0726.png",
@@ -58,8 +59,8 @@
   "entrypoints": [
     "static/js/runtime-main.ceaf4b5f.js",
     "static/css/2.5a510433.chunk.css",
-    "static/js/2.ffd33610.chunk.js",
+    "static/js/2.2c33c1d4.chunk.js",
     "static/css/main.401e121e.chunk.css",
-    "static/js/main.1ca6a6d1.chunk.js"
+    "static/js/main.adebc649.chunk.js"
   ]
 }
