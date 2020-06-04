@@ -83,12 +83,20 @@ export const TopNav = (props) => {
           Contact
         </NavItem>
         <NavItem
-          href="https://raw.githubusercontent.com/bluerainmango/emilyYu/661e64e47ac1ac550cc454ce38acf29e0c8387fd/assets/resume_emilyYu.pdf"
+          href="https://github.com/bluerainmango/emily-yu/blob/master/src/assets/resume-emily-yu-graphic.pdf?raw=true"
           target="_blank"
           className="waves-effect sidenav-close"
         >
           <Icon>insert_drive_file</Icon>
-          Resume
+          Resume(Graphic ver.)
+        </NavItem>
+        <NavItem
+          href="https://github.com/bluerainmango/emily-yu/blob/master/src/assets/resume-emily-yu-ats.docx?raw=true"
+          target="_blank"
+          className="waves-effect sidenav-close"
+        >
+          <Icon>insert_drive_file</Icon>
+          Resume(Word ver.)
         </NavItem>
       </Navbar>
     </div>

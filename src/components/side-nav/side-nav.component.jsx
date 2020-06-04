@@ -94,7 +94,7 @@ export const SideNavMenu = (props) => {
           icon="insert_drive_file"
           className="waves-effect"
         >
-          Resume(ATS ver.)
+          Resume(Word ver.)
         </SideNavItem>
       </SideNav>
     </div>
