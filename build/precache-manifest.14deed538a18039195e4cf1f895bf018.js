@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "04df592faf9da7937f562c320d21e552",
+    "revision": "3b694f1c283cb2e0cb72f2b71591b23d",
     "url": "/index.html"
   },
   {
-    "revision": "e5bafa97bc0baf540537",
+    "revision": "c3ba3bf80177ba780809",
     "url": "/static/css/2.5a510433.chunk.css"
   },
   {
-    "revision": "11a572a532499a9ff931",
+    "revision": "d90e9a56be184cdcaf5a",
     "url": "/static/css/main.401e121e.chunk.css"
   },
   {
-    "revision": "e5bafa97bc0baf540537",
-    "url": "/static/js/2.2c33c1d4.chunk.js"
+    "revision": "c3ba3bf80177ba780809",
+    "url": "/static/js/2.bce42afd.chunk.js"
   },
   {
     "revision": "d0b30a1909a753c393e134caf98fa9bb",
-    "url": "/static/js/2.2c33c1d4.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.bce42afd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "11a572a532499a9ff931",
-    "url": "/static/js/main.adebc649.chunk.js"
+    "revision": "d90e9a56be184cdcaf5a",
+    "url": "/static/js/main.7b6fa40a.chunk.js"
   },
   {
     "revision": "5284eec07972ace79c95",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cafe24.145b4dfd.jpg"
   },
   {
+    "revision": "f62ddd482ef4da9aba9d5c3626cfc764",
+    "url": "/static/media/chai.f62ddd48.png"
+  },
+  {
     "revision": "31be075e6776401fd15f08c3fdfa2265",
     "url": "/static/media/css3.31be075e.png"
   },
@@ -64,6 +68,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/html5.88225dbd.png"
   },
   {
+    "revision": "4895f0b87f5bce503071d27086196c52",
+    "url": "/static/media/jenkins.4895f0b8.png"
+  },
+  {
+    "revision": "a91469f3610819f51b07bb002f25804a",
+    "url": "/static/media/jest.a91469f3.jpg"
+  },
+  {
     "revision": "e849d7b15441fd03fd4692feb02d38fc",
     "url": "/static/media/jquery.e849d7b1.png"
   },
@@ -72,8 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/js.7f025be0.png"
   },
   {
-    "revision": "e8520d9a908608ec965a8710451f74eb",
-    "url": "/static/media/materialize.e8520d9a.png"
+    "revision": "6b9ffbe33f2d625d05526ca2d61583bf",
+    "url": "/static/media/materialize2.6b9ffbe3.png"
+  },
+  {
+    "revision": "8cd1f9b8121e513ca5c170d5441c85ef",
+    "url": "/static/media/mocha.8cd1f9b8.png"
   },
   {
     "revision": "6fca776ef7f142dbe042bc4ebb4ff9ce",

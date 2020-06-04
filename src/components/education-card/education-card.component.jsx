@@ -5,7 +5,7 @@ import taAndy from "../../assets/img/andy.jpeg";
 
 import "./education-card.style.css";
 
-export const EducationCard = props => (
+export const EducationCard = (props) => (
   <div className="row no-margin">
     <div className="card horizontal wide card-restyle-edu">
       <div className="card-left">
@@ -86,11 +86,11 @@ function HowIWasUcr() {
       <div className="row comment">
         <figure className="ta">
           <img src={taAndy} alt="UCR TA's comment" />
-          <figcaption className="center">Andy Huynh, Dec.07.2019</figcaption>
+          <figcaption className="center">Andy Huynh, Apr.08.2020</figcaption>
         </figure>
         <div className="valign-wrapper comment-words">
-          "Great job on the homework. The UI looks very polished. The code looks
-          very neat and organized. Readme has all good screenshot and link.
+          "Great job on the homework, including going above and beyond. Your
+          work has vastly improved and your code looks very neat and organized.
           Great quality work overall."
         </div>
       </div>
