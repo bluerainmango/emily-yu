@@ -12,16 +12,45 @@ import projBudget from "../../assets/img/proj_budget.gif";
 import projWorkout from "../../assets/img/proj_workout.gif";
 import projDirectory from "../../assets/img/proj_directory.gif";
 import projGoogleBooks from "../../assets/img/proj_googlebooks.gif";
+import projSpaceY from "../../assets/img/proj_spacey.gif";
 
 export const projectData = [
+  {
+    title: "Space Y",
+    linkDeploy: "https://spacey-ecommerce.herokuapp.com/",
+    linkRepo: "https://github.com/bluerainmango/ecommerce",
+    image: projSpaceY,
+    type: "Indv",
+    role: "",
+    description:
+      "Ecommerce application where personal space travel will be possible to take off beyond the earth. Not real yet but pretty soon the day will come.",
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "AWS S3",
+      "Stripe",
+      "Redux",
+      "Redux-saga",
+      "JWT",
+      "Cookie",
+      "NodeMailer",
+      "SendGrid",
+      "Multer",
+      "Javascript",
+      "HTML",
+      "CSS",
+      "Heroku",
+    ],
+  },
   {
     title: "Movie Map",
     linkDeploy: "https://movie-map.herokuapp.com/",
     linkRepo: "https://github.com/fguzmanrs/movieMap2",
     image: projMovieMap,
     type: "Team",
-    role:
-      "Role: Back-end(RESTful APIs, Authentication - JWT & Cookie, Error Handling), Front-end(React except css styling, design)",
+    role: "Role: Back-end(RESTful APIs, Authentication - JWT & Cookie, Error Handling), Front-end(React except css styling, design)",
     description:
       "A MERN stack app has been created to help film buffs who want targeted movie recommendations and the information and resources to watch their finds.",
     tech: [
@@ -128,8 +157,7 @@ export const projectData = [
     linkRepo: "https://github.com/fguzmanrs/eclecticKitchen",
     image: projKitchen,
     type: "Team",
-    role:
-      "Role: AJAX, Client-side rendering(except styling, design), App functionality(Favorite, Validation, Modal etc), Core app concept",
+    role: "Role: AJAX, Client-side rendering(except styling, design), App functionality(Favorite, Validation, Modal etc), Core app concept",
     description:
       "The eclecticKitchen App is for the aspiring cook that needs some help combining ingredients. It suggests dishes you can make with the ingredients you have, also it will show any ingrediens you may still be missing.",
     tech: [
