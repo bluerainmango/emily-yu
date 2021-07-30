@@ -1,6 +1,22 @@
 //  {/* //title, company, location, period, links(url,name),works(description) */}
 export const experienceData = [
   {
+    title: "Operations Analyst/Data Analyst",
+    company: "Samsung Electronics America",
+    location: "Compton, USA",
+    period: "Jul. 2020 - Jan.2021",
+    links: [
+      {
+        url: "https://www.samsung.com/us/about-us/our-business/",
+        name: "Samsung Electronics America",
+      },
+    ],
+    works: [
+      "Analyzed data and found insights for reverse logistics operations with Power BI, Excel and SAP.",
+      "Managed and lead agents for operations and data.",
+    ],
+  },
+  {
     title: "Ecommerce & Online Marketing Manager",
     company: "CAILYN Cosmetics & Double Dare",
     location: "Santa Fe Springs, USA",

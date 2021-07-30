@@ -34,7 +34,7 @@ export const ExperienceCardLarge = () => (
   </div>
 );
 
-export const ExperienceCardSmall = props => (
+export const ExperienceCardSmall = (props) => (
   <div className="card wide">
     <div className="card-content">
       <span className="card-title activator text-header">{props.title}</span>
@@ -45,7 +45,7 @@ export const ExperienceCardSmall = props => (
         <Icon className="activator">library_books</Icon>
       </button>
       <div className="card-link margin-top-3">
-        {props.links.map(link => (
+        {props.links.map((link) => (
           <a
             key={link.name}
             href={link.url}
@@ -59,7 +59,7 @@ export const ExperienceCardSmall = props => (
     </div>
     <div className="card-reveal">
       <span className="card-title grey-text text-darken-4">
-        Works<i className="material-icons right">close</i>
+        Work<i className="material-icons right">close</i>
       </span>
       <ul className="square">
         {props.works.map((work, i) => (
