@@ -76,6 +76,11 @@
   background: rgba(198, 16, 0, 0);
 }
 
+.card-content img{
+  width: 10rem;
+  height: 10rem;
+}
+
 @-webkit-keyframes pulsate1 {
   0% {
     -webkit-transform: scale(0.6);
@@ -186,4 +191,5 @@
     margin-right: 0;
     margin-bottom: 2rem;
   }
+
 }

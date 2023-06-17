@@ -8,7 +8,7 @@ export const Contact = () => {
     { icon: "icon-gmail", to: "mailto:emily.jiyeon.yu@gmail.com" },
     { icon: "icon-linkedin", to: "https://linkedin.com/in/bluerainmango" },
     { icon: "icon-github", to: "https://github.com/bluerainmango" },
-    { icon: "icon-mobile", to: "562-521-4851" },
+    // { icon: "icon-mobile", to: "" },
   ];
 
   return (

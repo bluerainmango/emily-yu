@@ -23,7 +23,7 @@ export const educationData = [
     period: "Mar.2007 - Feb.2013",
     location: "Seoul, South Korea",
     study:
-      "Contents Design: Responsive web design, multimedia editing(Photoshop, Premiere), HCI(Human Computer Interface) etc.",
+      "Contents Design: Responsive web design, UI/UX, HCI(Human Computer Interface), programming(C++, data structures) etc.",
     link: "https://www.swu.ac.kr/www/futurec_3.html"
   },
   {

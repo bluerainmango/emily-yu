@@ -20,12 +20,17 @@ import webpack from "../../assets/img/webpack.png";
 import github from "../../assets/img/github.png";
 import heroku from "../../assets/img/heroku.png";
 import shopify from "../../assets/img/shopify.png";
-import cafe24 from "../../assets/img/cafe24.jpg";
 import puppeteer from "../../assets/img/puppeteer.jpg";
 import jest from "../../assets/img/jest.jpg";
 import mocha from "../../assets/img/mocha.png";
 import chai from "../../assets/img/chai.png";
 import jenkins from "../../assets/img/jenkins.png";
+import styledComponent from '../../assets/img/styled-component.png';
+import aws from '../../assets/img/aws-logo.jpeg';
+import saga from '../../assets/img/redux-saga.png';
+import ts from '../../assets/img/typescript.png';
+import python from '../../assets/img/python.png';
+import accessibility from '../../assets/img/accessibility.png';
 
 import "./skill.style.css";
 
@@ -43,21 +48,21 @@ export const Skill = () => {
         </h3>
 
         <SkillSlot
-          title="HTML & CSS"
-          images={[html5, css3, sass, bootstrap, materialize2]}
+          title="Frontend"
+          images={[js, ts, react, redux, saga, html5, css3, sass, bootstrap, materialize2, styledComponent, jquery, accessibility]}
         />
-        <SkillSlot title="Javascript" images={[js, jquery, react, redux]} />
+        {/* <SkillSlot title="Javascript" images={[]} /> */}
         <SkillSlot
           title="Backend"
-          images={[nodejs, express, mysql, sequelize, mongodb, mongoose]}
+          images={[nodejs, express, mysql, sequelize, mongodb, mongoose, python]}
         />
-        <SkillSlot
+        {/* <SkillSlot
           title="Automated Testing"
-          images={[puppeteer, jest, mocha, chai, jenkins]}
-        />
+          images={[]}
+        /> */}
         <SkillSlot
           title="Others"
-          images={[webpack, github, heroku, shopify, cafe24]}
+          images={[webpack, github, aws, heroku, shopify, puppeteer, jest, mocha, chai, jenkins]}
         />
       </div>
     </section>

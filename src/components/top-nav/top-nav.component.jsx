@@ -82,7 +82,7 @@ export const TopNav = (props) => {
           <Icon>email</Icon>
           Contact
         </NavItem>
-        <NavItem
+        {/* <NavItem
           href="https://github.com/bluerainmango/emily-yu/blob/master/src/assets/resume-emily-yu-graphic.pdf?raw=true"
           target="_blank"
           className="waves-effect sidenav-close"
@@ -97,7 +97,7 @@ export const TopNav = (props) => {
         >
           <Icon>insert_drive_file</Icon>
           Resume(Word ver.)
-        </NavItem>
+        </NavItem> */}
       </Navbar>
     </div>
   );
