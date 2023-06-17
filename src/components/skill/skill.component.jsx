@@ -52,6 +52,7 @@ export const Skill = () => {
           images={[js, ts, react, redux, saga, html5, css3, sass, bootstrap, materialize2, styledComponent, jquery, accessibility]}
         />
         {/* <SkillSlot title="Javascript" images={[]} /> */}
+        
         <SkillSlot
           title="Backend"
           images={[nodejs, express, mysql, sequelize, mongodb, mongoose, python]}
