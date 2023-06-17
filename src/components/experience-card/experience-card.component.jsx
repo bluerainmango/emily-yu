@@ -16,16 +16,17 @@ export const ExperienceCardLarge = () => (
 				in me for your team? Contact and take this slot!
 			</p>
 			<div className='card-link margin-top-3'>
-				<a className='play-btn' href='mailto:emily.jiyeon.yu@gmail.com'>
-					{/* <p className="valign-wrapper">Send Email</p> */}
-					Send Email
-				</a>
 				<a
 					href='https://linkedin.com/in/bluerainmango'
 					target='_blank'
 					rel='noopener noreferrer'
+          className='play-btn'
 				>
 					Contact via Linkedin
+				</a>
+				<a href='mailto:emily.jiyeon.yu@gmail.com'>
+					{/* <p className="valign-wrapper">Send Email</p> */}
+					Send Email
 				</a>
 			</div>
 		</div>
