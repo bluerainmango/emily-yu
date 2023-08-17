@@ -8,7 +8,7 @@ import hackers from '../../assets/img/hackers.jpeg';
 
 export const experienceData = [
 	{
-		title: 'Software Development Engineer(Frontend)',
+		title: 'Software Development Engineer(Front End)',
 		company: 'Amazon AWS WorkDocs',
 		location: 'Irvine, USA',
 		period: 'Aug.2022 - present',
@@ -79,7 +79,7 @@ export const experienceData = [
 		],
 	},
 	{
-		title: 'E-commerce & Web Marketing Manager',
+		title: 'E-commerce Web Specialist',
 		company: 'CAILYN Cosmetics & Double Dare',
 		location: 'Santa Fe Springs, USA',
 		period: 'Aug.2015 - Mar.2019',
@@ -92,10 +92,8 @@ export const experienceData = [
 			{ url: 'https://doubledarespa.com/', name: 'Double Dare' },
 		],
 		works: [
-			'Launched a new brand’s website called double dare, and raised the revenue to 19 times for first month within 6 months.',
-			'Created and operated SEO optimized websites through Shopify, Cafe24 and open cart web(Retail, Wholesale, Microsite).',
-			'Analyzed web data and gathered insights for sales with Google Analytics, campaign tags and etc.',
-			'Setup KPIs and built up strategies for online & eCommerce. Managed social media advertisements.',
+			'Developed 5 eCommerce sites and themes with CMS(Shopify) and tackled Search Engine Optimization(SEO) and email templates.',
+			'Analyzed data with Google Analytics, implemented A/B test, and led team with data-driven decisions.',
 			'Setup and handled online platforms such as EDI, social commerce and online markets(Amazon Luxury & seller, Groupon, Ulta.com, Dillard’s, Bloomingdale’s)',
 		],
 	},
