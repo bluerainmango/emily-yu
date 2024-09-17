@@ -11,6 +11,7 @@
 .section__slot img {
   width: 6rem;
   margin-right: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* Responsive - landscape */

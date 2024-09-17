@@ -1,8 +1,8 @@
 import React from "react";
 
 import { SkillSlot } from "../skill-slot/skill-slot.component";
-import html5 from "../../assets/img/html5.png";
-import css3 from "../../assets/img/css3.png";
+import html5 from "../../assets/img/html5.svg";
+import css3 from "../../assets/img/css3.svg";
 import sass from "../../assets/img/sass.png";
 import bootstrap from "../../assets/img/bootstrap.png";
 import materialize2 from "../../assets/img/materialize2.png";
@@ -31,6 +31,11 @@ import saga from '../../assets/img/redux-saga.png';
 import ts from '../../assets/img/typescript.png';
 import python from '../../assets/img/python.png';
 import accessibility from '../../assets/img/accessibility.png';
+import angular from '../../assets/img/angular.png';
+import nextjs from '../../assets/img/nextjs.jpg';
+import nestjs from '../../assets/img/nestjs.png';
+import electron from '../../assets/img/electron.png';
+import storybook from '../../assets/img/storybook.png';
 
 import "./skill.style.css";
 
@@ -49,13 +54,13 @@ export const Skill = () => {
 
         <SkillSlot
           title="Frontend"
-          images={[js, ts, react, redux, saga, html5, css3, sass, bootstrap, materialize2, styledComponent, jquery, accessibility]}
+          images={[react, angular, ts, redux, saga, nextjs, electron, js, html5, css3, sass, storybook, bootstrap, materialize2, styledComponent, accessibility]}
         />
         {/* <SkillSlot title="Javascript" images={[]} /> */}
-        
+
         <SkillSlot
           title="Backend"
-          images={[nodejs, express, mysql, sequelize, mongodb, mongoose, python]}
+          images={[nodejs, express, nestjs, mysql, sequelize, mongodb, mongoose, python]}
         />
         {/* <SkillSlot
           title="Automated Testing"

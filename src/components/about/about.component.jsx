@@ -20,7 +20,7 @@ export const About = (props) => {
 				<div className='section__description'>
 					<p>
 						A highly motivated Frontend Engineer having a solid
-						understanding of React / Javascript with 5 years of
+						understanding of React / Angular / Javascript / Node.js with 5 years of
 						experience in customer facing web applications,
 						e-commerce, micro-frontends, and reusable module.
 					</p>
@@ -29,7 +29,7 @@ export const About = (props) => {
 						A passionate problem solver having strong organizational
 						skills and acute attention to detail driven by a
 						well-balanced background of UX design, data analysis,
-						and full stack coding.
+						and full-stack engineer career.
 					</p>
 
 					<p>

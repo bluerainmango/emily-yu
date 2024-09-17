@@ -5,13 +5,32 @@ import wordpress from '../../assets/img/wordpress.png';
 import samsung from '../../assets/img/samsung.png';
 import cailyn from '../../assets/img/cailyn.jpeg';
 import hackers from '../../assets/img/hackers.jpeg';
+import extron from '../../assets/img/extron.png';
 
 export const experienceData = [
+	{
+		title: 'Software Development Engineer(Full stack)',
+		company: 'Extron',
+		location: 'Anaheim, USA',
+		period: 'Sept. 2023 - present',
+		image: extron,
+		links: [
+			{
+				url: 'https://aws.amazon.com/workdocs/',
+				name: 'Amazon AWS WorkDocs',
+			},
+		],
+		works: [
+			'Developed Cloud based AV hardware control system(Web app, Desktop app) using Electron, Angular, Node.js, Nest.js, AWS, and micro services.',
+			'Converted manual tests between devices and software and .NET based legacy products into one-click automation on the web.',
+			'Developed the features of the product with various AWS services(IoT, Lambda, DynamoDB, SQS, SNS, Step functions, etc.) and migration works.',
+		],
+	},
 	{
 		title: 'Software Development Engineer(Front End)',
 		company: 'Amazon AWS WorkDocs',
 		location: 'Irvine, USA',
-		period: 'Aug.2022 - present',
+		period: 'Aug. 2022 - Jun. 2023',
 		image: aws,
 		links: [
 			{
@@ -26,13 +45,14 @@ export const experienceData = [
 			'Improved the performance of product including loading speed by redesigning asynchronous APIs and component efficiency.',
 			'Proactively approached accessibility issue with visually impaired agent to improve the product for real customer’s voice.',
 			'Re-designed AngularJS legacy codes into React based new app using related technologies(Redux, Saga).',
+			'Laid off and AWS decided to end support for the product of our organization.',
 		],
 	},
 	{
 		title: 'Frontend Developer',
 		company: 'Spigen',
 		location: 'Irvine, USA',
-		period: 'Oct.2021 - May.2022',
+		period: 'Oct. 2021 - May. 2022',
 		image: spigen,
 		links: [
 			{
@@ -47,25 +67,25 @@ export const experienceData = [
 		works: [
 			'Developed Amazon automating assistant web application, Tquens.',
 			'Coded various web apps requiring pixel-perfect, highly responsive, and reusable web UI.',
-			'Developed React components with PMs and UX designers for Design System',
+			'Developed React components with PMs and UX designers for Design System.',
 		],
 	},
-	{
-		title: 'Frontend Freelancer',
-		// company: "Spigen",
-		location: 'Riverside, USA',
-		period: 'Feb.2021 - Aug.2021',
-		image: wordpress,
-		links: [],
-		works: [
-			'Developed WordPress website and digitalized menu for local merchant. ',
-		],
-	},
+	// {
+	// 	title: 'Frontend Freelancer',
+	// company: "Spigen",
+	// 	location: 'Riverside, USA',
+	// 	period: 'Feb. 2021 - Aug. 2021',
+	// 	image: wordpress,
+	// 	links: [],
+	// 	works: [
+	// 		'Developed WordPress website and digitalized menu for local merchant. ',
+	// 	],
+	// },
 	{
 		title: 'Data Analyst',
 		company: 'Samsung Electronics America',
 		location: 'Compton, USA',
-		period: 'Jul.2020 - Jan.2021',
+		period: 'Jul. 2020 - Jan. 2021',
 		image: samsung,
 		links: [
 			{
@@ -76,38 +96,6 @@ export const experienceData = [
 		works: [
 			'Analyzed data and found insights for reverse logistics operations with Power BI, Excel and SAP.',
 			'Managed and lead agents for operations and data.',
-		],
-	},
-	{
-		title: 'E-commerce Web Specialist',
-		company: 'CAILYN Cosmetics & Double Dare',
-		location: 'Santa Fe Springs, USA',
-		period: 'Aug.2015 - Mar.2019',
-    image: cailyn,
-		links: [
-			{
-				url: 'https://www.cailyncosmetics.com',
-				name: 'CAILYN Cosmetics',
-			},
-			{ url: 'https://doubledarespa.com/', name: 'Double Dare' },
-		],
-		works: [
-			'Developed 5 eCommerce sites and themes with CMS(Shopify) and tackled Search Engine Optimization(SEO) and email templates.',
-			'Analyzed data with Google Analytics, implemented A/B test, and led team with data-driven decisions.',
-			'Setup and handled online platforms such as EDI, social commerce and online markets(Amazon Luxury & seller, Groupon, Ulta.com, Dillard’s, Bloomingdale’s)',
-		],
-	},
-	{
-		title: 'Online Marketer & PR Coordinator',
-		company: 'Hackers Education Group, Korea',
-		location: 'Seoul, South Korea',
-		period: 'Dec.2013 - Mar.2015',
-    image: hackers,
-		links: [{ url: 'https://www.hackers.co.kr/', name: 'Hackers English' }],
-		works: [
-			'Planned and developed online content and e-learning systems.',
-			'Operated website (www.hackers.co.kr) and mobile apps.',
-			'In charge of PR and managed online media and press.',
 		],
 	},
 ];
