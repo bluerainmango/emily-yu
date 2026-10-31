@@ -33,46 +33,62 @@ export const ExperienceCardLarge = () => (
 	</div>
 );
 
-export const ExperienceCardSmall = (props) => (
-	<div className='card wide'>
-		<div className='card-content'>
-			<img
-				src={props.image}
-				alt={props.image}
-				key={props.image}
-				aria-label={props.image}
-			/>
-			<span className='card-title activator text-header'>
-				{props.title}
-			</span>
-			<p>{props.company}</p>
-			<p>{props.location}</p>
-			<p>{props.period}</p>
-			<button className='btn-floating halfway-fab waves-effect waves-light blue'>
-				<Icon className='activator'>library_books</Icon>
-			</button>
-			<div className='card-link margin-top-3'>
-				{props.links.map((link) => (
-					<a
-						key={link.name}
-						href={link.url}
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						{link.name}
-					</a>
-				))}
-			</div>
-		</div>
-		<div className='card-reveal'>
-			<span className='card-title grey-text text-darken-4'>
-				Work<i className='material-icons right'>close</i>
-			</span>
-			<ul className='square'>
+// Emphasize metrics in a work description (e.g. 96%, 2M+, L4)
+const METRIC = /(\d+%|\d+M\+|\bL\d\b)/;
+
+const highlightMetrics = (text) =>
+	text.split(METRIC).map((part, i) =>
+		i % 2 === 1 ? (
+			<strong className='experience__metric' key={i}>
+				{part}
+			</strong>
+		) : (
+			part
+		)
+	);
+
+export const ExperienceItem = (props) => (
+	<article className='experience__item'>
+		<span className='experience__dot' aria-hidden='true'></span>
+		<div className='experience__card'>
+			<header className='experience__header'>
+				<img className='experience__logo' src={props.image} alt='' />
+				<div className='experience__heading'>
+					<h4 className='experience__title'>{props.title}</h4>
+					<p className='experience__company'>
+						{props.company}
+						<span className='experience__location'>
+							{' '}
+							· {props.location}
+						</span>
+					</p>
+				</div>
+				<p className='experience__period'>
+					{props.period}
+				</p>
+			</header>
+
+			<ul className='experience__works'>
 				{props.works.map((work, i) => (
-					<li key={`work-${i}`}>{work}</li>
+					<li key={`work-${i}`}>{highlightMetrics(work)}</li>
 				))}
 			</ul>
+
+			{props.links.length > 0 && (
+				<div className='experience__links'>
+					{props.links.map((link) => (
+						<a
+							key={link.name}
+							href={link.url}
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							{link.name}
+							<Icon tiny>open_in_new</Icon>
+						</a>
+					))}
+				</div>
+			)}
 		</div>
-	</div>
+	</article>
 );

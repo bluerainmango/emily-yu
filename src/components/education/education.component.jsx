@@ -11,7 +11,7 @@ export const Education = () => {
       <span className="anchor"></span>
       {/* <span className="anchor" id="anchor-education"></span> */}
       <h2 className="section__header">EDUCATION</h2>
-      <div className="section__container no-height margin-top-3">
+      <div className="section__container no-height margin-top-3 education__timeline">
         {educationData.map((edu) => (
           <EducationCard key={edu.id} {...edu} />
         ))}

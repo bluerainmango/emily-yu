@@ -3,7 +3,7 @@ import React from "react";
 import { Row, Col } from "react-materialize";
 import {
   ExperienceCardLarge,
-  ExperienceCardSmall,
+  ExperienceItem,
 } from "../experience-card/experience-card.component";
 
 import { experienceData } from "./experience.data";
@@ -29,13 +29,11 @@ export const Experience = () => {
           </Col>
         </Row>
 
-        <Row>
+        <div className="experience__timeline">
           {experienceData.map((experience) => (
-            <Col s={12} m={6} key={experience.company}>
-              <ExperienceCardSmall key={experience.company} {...experience} />
-            </Col>
+            <ExperienceItem key={experience.company} {...experience} />
           ))}
-        </Row>
+        </div>
       </div>
     </section>
   );

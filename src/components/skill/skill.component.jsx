@@ -36,6 +36,9 @@ import nextjs from '../../assets/img/nextjs.jpg';
 import nestjs from '../../assets/img/nestjs.png';
 import electron from '../../assets/img/electron.png';
 import storybook from '../../assets/img/storybook.png';
+import cypress from '../../assets/img/cypress.png';
+import datadog from '../../assets/img/datadog.png';
+import bedrock from '../../assets/img/bedrock.png';
 
 import "./skill.style.css";
 
@@ -54,13 +57,39 @@ export const Skill = () => {
 
         <SkillSlot
           title="Frontend"
-          images={[react, angular, ts, redux, saga, nextjs, electron, js, html5, css3, sass, storybook, bootstrap, materialize2, styledComponent, accessibility]}
+          skills={[
+            { name: "React", image: react },
+            { name: "Angular", image: angular },
+            { name: "TypeScript", image: ts },
+            { name: "Redux", image: redux },
+            { name: "Redux-Saga", image: saga },
+            { name: "Next.js", image: nextjs },
+            { name: "Electron", image: electron },
+            { name: "JavaScript", image: js },
+            { name: "HTML5", image: html5 },
+            { name: "CSS3", image: css3 },
+            { name: "Sass", image: sass },
+            { name: "Storybook", image: storybook },
+            { name: "Bootstrap", image: bootstrap },
+            { name: "Materialize", image: materialize2 },
+            { name: "Styled Components", image: styledComponent },
+            { name: "Accessibility", image: accessibility },
+          ]}
         />
         {/* <SkillSlot title="Javascript" images={[]} /> */}
 
         <SkillSlot
           title="Backend"
-          images={[nodejs, express, nestjs, mysql, sequelize, mongodb, mongoose, python]}
+          skills={[
+            { name: "Node.js", image: nodejs },
+            { name: "Express", image: express },
+            { name: "NestJS", image: nestjs },
+            { name: "MySQL", image: mysql },
+            { name: "Sequelize", image: sequelize },
+            { name: "MongoDB", image: mongodb },
+            { name: "Mongoose", image: mongoose },
+            { name: "Python", image: python },
+          ]}
         />
         {/* <SkillSlot
           title="Automated Testing"
@@ -68,7 +97,21 @@ export const Skill = () => {
         /> */}
         <SkillSlot
           title="Others"
-          images={[webpack, github, aws, heroku, shopify, puppeteer, jest, mocha, chai, jenkins]}
+          skills={[
+            { name: "AWS", image: aws },
+            { name: "Amazon Bedrock", image: bedrock },
+            { name: "Datadog", image: datadog },
+            { name: "Webpack", image: webpack },
+            { name: "GitHub", image: github },
+            { name: "Heroku", image: heroku },
+            { name: "Shopify", image: shopify },
+            { name: "Cypress", image: cypress },
+            { name: "Puppeteer", image: puppeteer },
+            { name: "Jest", image: jest },
+            { name: "Mocha", image: mocha },
+            { name: "Chai", image: chai },
+            { name: "Jenkins", image: jenkins },
+          ]}
         />
       </div>
     </section>

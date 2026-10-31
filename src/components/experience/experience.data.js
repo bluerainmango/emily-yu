@@ -9,26 +9,28 @@ import extron from '../../assets/img/extron.png';
 
 export const experienceData = [
 	{
-		title: 'Software Development Engineer(Full stack)',
+		title: 'Software Development Engineer(Full Stack)',
 		company: 'Extron',
 		location: 'Anaheim, USA',
 		period: 'Sept. 2023 - present',
 		image: extron,
 		links: [
 			{
-				url: 'https://aws.amazon.com/workdocs/',
-				name: 'Amazon AWS WorkDocs',
+				url: 'https://www.extron.com/',
+				name: 'Extron',
 			},
 		],
 		works: [
-			'Developed Cloud based AV hardware control system(Web app, Desktop app) using Electron, Angular, Node.js, Nest.js, AWS, and micro services.',
-			'Converted manual tests between devices and software and .NET based legacy products into one-click automation on the web.',
-			'Developed the features of the product with various AWS services(IoT, Lambda, DynamoDB, SQS, SNS, Step functions, etc.) and migration works.',
+			'Improved execution speed by 74% (75s to 20s) by redesigning device file-system validation into one-click web automation on an AWS-based backend, replacing manual device testing.',
+			'Built RESTful APIs from the ground up (domain, certificate, business logic) and developed the UI on top of them.',
+			'Implemented a real-time analytics dashboard using a DynamoDB Stream and OpenSearch ETL pipeline.',
+			'Created a monitoring system that detects hardware abnormality and sends email notifications.',
+			'Built desktop and web apps for hardware control using microservices architecture (Angular, Electron, TypeScript, Node.js, Nest.js, AWS IoT, Step Functions, Lambda, SNS).',
 		],
 	},
 	{
 		title: 'Software Development Engineer(Front End)',
-		company: 'Amazon AWS WorkDocs',
+		company: 'Amazon (AWS WorkDocs)',
 		location: 'Irvine, USA',
 		period: 'Aug. 2022 - Jun. 2023',
 		image: aws,
@@ -39,13 +41,11 @@ export const experienceData = [
 			},
 		],
 		works: [
-			'Got evaluated as a high performer at my level in my team.',
-			'Owned and developed the core functionality of the product(document preview and commenting).',
-			'Tackled scalability and accessibility as a document editing tool targeting massive users including all Amazon employees.',
-			'Improved the performance of product including loading speed by redesigning asynchronous APIs and component efficiency.',
-			'Proactively approached accessibility issue with visually impaired agent to improve the product for real customer’s voice.',
-			'Re-designed AngularJS legacy codes into React based new app using related technologies(Redux, Saga).',
-			'Laid off and AWS decided to end support for the product of our organization.',
+			'Cut load time by 96% (60s to 2s) by redesigning asynchronous API usage and component efficiency.',
+			'Converted AngularJS legacy code into a new React-based app (Redux, Saga), improving UX, performance, and accessibility.',
+			'Improved scalability and accessibility of a document editing tool targeting 2M+ users by working with visually impaired agents.',
+			'Owned core product functionality: document view and user interaction (comments and annotations).',
+			'Evaluated as a high performer at my level (L4) on the team.',
 		],
 	},
 	{
@@ -56,31 +56,16 @@ export const experienceData = [
 		image: spigen,
 		links: [
 			{
-				url: 'https://tquens.com/',
-				name: 'Tquens project',
-			},
-			{
-				url: 'https://www.spigen.com/pages/enzo',
+				url: 'https://www.spigen.com',
 				name: 'Spigen',
 			},
 		],
 		works: [
 			'Developed Amazon automating assistant web application, Tquens.',
-			'Coded various web apps requiring pixel-perfect, highly responsive, and reusable web UI.',
-			'Developed React components with PMs and UX designers for Design System.',
+			'Prototyped interactive components with product managers and designers for Design System.',
+			'Created branding web apps requiring pixel-perfect, highly responsive, and mobile-friendly UI.',
 		],
 	},
-	// {
-	// 	title: 'Frontend Freelancer',
-	// company: "Spigen",
-	// 	location: 'Riverside, USA',
-	// 	period: 'Feb. 2021 - Aug. 2021',
-	// 	image: wordpress,
-	// 	links: [],
-	// 	works: [
-	// 		'Developed WordPress website and digitalized menu for local merchant. ',
-	// 	],
-	// },
 	{
 		title: 'Data Analyst',
 		company: 'Samsung Electronics America',

@@ -41,6 +41,14 @@ export const SideNavMenu = (props) => {
           About
         </SideNavItem>
         <SideNavItem
+          href="#anchor-recommendation"
+          icon="format_quote"
+          className="waves-effect recommendation"
+          onClick={props.onClick}
+        >
+          Recommendations
+        </SideNavItem>
+        <SideNavItem
           href="#anchor-skill"
           icon="equalizer"
           className="waves-effect skill"

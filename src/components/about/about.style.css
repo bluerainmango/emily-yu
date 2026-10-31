@@ -19,8 +19,90 @@
   width: 30rem;
 }
 
+/* Two key strengths */
+.about__strengths {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+.about__strength {
+  flex: 1;
+  padding: 3.5rem 3rem;
+  border-top: 6px solid rgb(0, 162, 255);
+  border-radius: 4px;
+  background-color: #f4faff;
+  box-shadow: 0 2px 8px rgba(13, 71, 161, 0.12);
+  font-size: 1.6rem;
+}
+.about__strength-icon {
+  font-size: 4.8rem !important;
+  color: rgb(0, 162, 255);
+}
+.about__strength-title {
+  margin: 1rem 0 2rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #0d47a1;
+}
+.about__metrics {
+  margin: 2.5rem 0 0;
+}
+.about__metrics li {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(13, 71, 161, 0.12);
+}
+.about__metric-value {
+  min-width: 7.5rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: rgb(0, 162, 255);
+}
+.about__metric-label em {
+  color: rgb(120, 120, 120);
+}
+.about__quotes {
+  margin: 2.5rem 0 0;
+}
+.about__quotes li {
+  padding: 1.2rem 0 1.2rem 1.5rem;
+  border-top: 1px solid rgba(13, 71, 161, 0.12);
+  border-left: 3px solid rgb(0, 162, 255);
+}
+.about__quotes q {
+  display: block;
+  font-size: 1.7rem;
+  font-style: italic;
+  color: #0d47a1;
+}
+.about__quote-author {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  color: rgb(120, 120, 120);
+}
+.about__strength-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+@media only screen and (max-width: 768px) {
+  .about__strengths {
+    flex-direction: column;
+  }
+}
+
 @media only screen and (max-width: 460px) {
   #about {
     margin-bottom: 10rem;
+  }
+  .about__strength {
+    padding: 2.5rem 2rem;
   }
 }

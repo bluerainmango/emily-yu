@@ -13,12 +13,16 @@
 }
 .card-restyle-edu {
   box-shadow: none !important;
-  border-left: 2px rgb(0, 162, 255) solid;
   margin-top: 0;
   margin: 0 auto !important;
+  padding-bottom: 3rem;
 }
+/* School icon sits on the timeline bar like Experience's dots */
 .moving-icon {
+  position: relative;
+  z-index: 2;
   transform: translate(-2rem, 1rem);
+  color: rgb(0, 162, 255);
 }
 .icon-bg {
   background-color: rgb(255, 255, 255);
@@ -33,8 +37,22 @@
   font-size: 1.3rem;
 }
 
-@media only screen and (max-width: 460px) {
-  #education .card-image {
-    height: 10rem;
+/* Override the global .card-image height (project-card.style.css) so the logo box fits the logo */
+#education .card-img-edu {
+  height: auto;
+}
+
+/* Stacked layout (see education.style.css): tighten logo and text spacing */
+@media only screen and (max-width: 900px) {
+  #education .card-left {
+    width: auto;
+  }
+  /* Left-align logo with the text below (card-content padding: 24px) */
+  #education .card-img-edu {
+    width: 7rem;
+    margin: 1rem 0 0 2.4rem;
+  }
+  #education .card-stacked .card-content {
+    padding-top: 1.5rem;
   }
 }

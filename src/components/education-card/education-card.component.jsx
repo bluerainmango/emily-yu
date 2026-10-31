@@ -20,7 +20,6 @@ export const EducationCard = (props) => (
       <div className="card-stacked">
         <div className="card-content">
           <p>{props.program}</p>
-          <p>{props.period}</p>
           <p>{props.location}</p>
 
           <Collapsible accordion>
@@ -38,7 +37,7 @@ export const EducationCard = (props) => (
                   rel="noopener noreferrer"
                   className="margin-top-3"
                 >
-                  <br /> > Detail Curriculum
+                  <br /> Curriculum Detail
                 </a>
               ) : (
                 ""

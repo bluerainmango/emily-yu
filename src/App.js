@@ -3,6 +3,7 @@ import "./App.css";
 
 import Header from "./components/header/header.component";
 import { About } from "./components/about/about.component";
+import { Recommendation } from "./components/recommendation/recommendation.component";
 import { TopNav } from "./components/top-nav/top-nav.component";
 import { SideNavMenu } from "./components/side-nav/side-nav.component";
 import { Skill } from "./components/skill/skill.component";
@@ -16,6 +17,7 @@ smoothscroll.polyfill();
 function App() {
   const sidenavRef = useRef();
   const aboutRef = useRef();
+  const recRef = useRef();
   const skillRef = useRef();
   const projRef = useRef();
   const expRef = useRef();
@@ -29,6 +31,7 @@ function App() {
   const handleOnScroll = () => {
     const scrollY = window.scrollY;
     const aboutOffsetTop = aboutRef.current.offsetTop;
+    const recOffsetTop = recRef.current.offsetTop;
     const skillOffsetTop = skillRef.current.offsetTop;
     const projOffsetTop = projRef.current.offsetTop;
     const expOffsetTop = expRef.current.offsetTop;
@@ -40,8 +43,10 @@ function App() {
     // );
 
     //* Follow scroll and set current menu state
-    if (scrollY >= aboutOffsetTop && scrollY < skillOffsetTop) {
+    if (scrollY >= aboutOffsetTop && scrollY < recOffsetTop) {
       setCurrentMenu("about");
+    } else if (scrollY >= recOffsetTop && scrollY < skillOffsetTop) {
+      setCurrentMenu("recommendation");
     } else if (scrollY >= skillOffsetTop && scrollY < projOffsetTop) {
       setCurrentMenu("skill");
     } else if (scrollY >= projOffsetTop && scrollY < expOffsetTop) {
@@ -99,6 +104,9 @@ function App() {
       case "about":
         scrollTo = aboutRef.current.offsetTop;
         break;
+      case "recommendation":
+        scrollTo = recRef.current.offsetTop;
+        break;
       case "skill":
         scrollTo = skillRef.current.offsetTop;
         break;
@@ -146,7 +154,10 @@ function App() {
       </div>
       <main>
         <div ref={aboutRef}>
-          <About />
+          <About onClick={handleSetClickedMenu} />
+        </div>
+        <div ref={recRef}>
+          <Recommendation />
         </div>
         <div ref={skillRef}>
           <Skill />

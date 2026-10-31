@@ -52,6 +52,14 @@ export const TopNav = (props) => {
         </NavItem>
         <NavItem
           onClick={props.onClick}
+          href="#anchor-recommendation"
+          className="waves-effect sidenav-close"
+        >
+          <Icon>format_quote</Icon>
+          Recommendations
+        </NavItem>
+        <NavItem
+          onClick={props.onClick}
           href="#anchor-skill"
           className="waves-effect sidenav-close"
         >

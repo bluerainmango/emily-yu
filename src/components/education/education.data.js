@@ -6,9 +6,9 @@ import logoHilo from "../../assets/img/hilo.jpg";
 export const educationData = [
   {
     id: "ucr",
-    title: "2020 UCR Extention",
+    title: "2020 UCR Extension",
     logo: logoUcr,
-    program: "Full Stack Web Development Program",
+    program: "Certificate in Full Stack Web Development (6-month program, avg. grade A+)",
     period: "Oct.2019 - Apr.2020",
     location: "Riverside, USA",
     study:
@@ -23,7 +23,7 @@ export const educationData = [
     period: "Mar.2007 - Feb.2013",
     location: "Seoul, South Korea",
     study:
-      "Contents Design: Responsive web design, UI/UX, HCI(Human Computer Interface), programming(C++, data structures) etc.",
+      "GPA 4.1 / 4.5 (top 5% of the university). Graduated first in the department; 8-time scholarship recipient. Focused on UI/UX design, HCI(Human Computer Interface), frontend, and programming(C++, data structures).",
     link: "https://www.swu.ac.kr/www/futurec_3.html"
   },
   {
@@ -34,7 +34,7 @@ export const educationData = [
     period: "Aug.2011 - May.2012",
     location: "Hawaii, USA",
     study:
-      "Communication in multifultural workplace, Interpersonal communidation etc",
+      "Communication in multicultural workplace, Interpersonal communication etc",
     link: ""
   }
 ];

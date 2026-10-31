@@ -7,5 +7,5 @@
 
 Thank you for your interest! If you have any questions about me or feel like chatting, just contact me via below! <br>The best way to get in touch is email.
 
-:email: bluerainmango@gmail.com  
+:email: emily.jiyeon.yu@gmail.com  
 :link: [Linkedin](https://www.linkedin.com/in/bluerainmango "Linkedin")
