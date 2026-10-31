@@ -21,7 +21,7 @@ const prefersReducedMotion = () =>
 const isKeyboardFocus = (el) => {
   try {
     return el.matches(":focus-visible");
-  } catch (err) {
+  } catch {
     return false;
   }
 };
@@ -72,17 +72,19 @@ const RecommendationCard = ({
 export const Recommendation = () => {
   const total = recommendationData.length;
   const [perView, setPerView] = useState(getPerView);
-  const [current, setCurrent] = useState(0);
+  const [slideIndex, setSlideIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [touchStartX, setTouchStartX] = useState(null);
 
   // Number of slide positions (moves one card at a time)
   const positions = Math.max(total - perView + 1, 1);
+  // Keep the position valid when perView grows on resize
+  const current = Math.min(slideIndex, positions - 1);
 
   const goTo = (index) => {
     setExpandedIndex(null);
-    setCurrent((index + positions) % positions);
+    setSlideIndex((index + positions) % positions);
   };
 
   //! Update cards per view on resize
@@ -91,11 +93,6 @@ export const Recommendation = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  //! Keep current position valid when perView changes
-  useEffect(() => {
-    if (current > positions - 1) setCurrent(positions - 1);
-  }, [current, positions]);
 
   //! Auto slide to the right (stops while hovered, focused, or reading a full quote)
   useEffect(() => {

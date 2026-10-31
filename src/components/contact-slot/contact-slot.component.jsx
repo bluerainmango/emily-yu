@@ -1,5 +1,6 @@
 import React from "react";
-import sprite from "../../assets/icon/sprite.svg";
+// no-inline: SVG <use> can't reference a data: URL, which Vite uses for small assets
+import sprite from "../../assets/icon/sprite.svg?no-inline";
 
 export const ContactSlot = ({ icon, to }) => (
   <div className="contact-info">
