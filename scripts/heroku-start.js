@@ -8,13 +8,9 @@ app.use(express.json());
 // Your static pre-build assets folder
 app.use(express.static(path.join(__dirname, '..', 'build')));
 
-// Root Redirects to the pre-build assets
-app.get('/', function (req, res) {
-	res.sendFile(path.join(__dirname, '..', 'build'));
-});
-
 // Any Page Redirects to the pre-build assets folder index.html that // will load the react app
-app.get('*', function (req, res) {
+// (Express 5 requires a named wildcard; '/' itself is served by express.static above)
+app.get('/{*splat}', function (req, res) {
 	res.sendFile(path.join(__dirname, '..', 'build/index.html'));
 });
 

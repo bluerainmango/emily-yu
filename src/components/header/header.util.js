@@ -11,7 +11,7 @@ export const headerAnimation = () => {
   }
 
   changeWord();
-  setInterval(changeWord, 3000);
+  const intervalId = setInterval(changeWord, 3000);
 
   //! Functions for animation
   function changeWord() {
@@ -68,4 +68,7 @@ export const headerAnimation = () => {
 
     wordArr.push(letters);
   }
+
+  // Cleanup for useEffect (React StrictMode mounts effects twice in development)
+  return () => clearInterval(intervalId);
 };

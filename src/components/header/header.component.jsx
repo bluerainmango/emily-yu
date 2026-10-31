@@ -7,7 +7,7 @@ import "./header.style.css";
 
 const Header = (props) => {
   useEffect(() => {
-    headerAnimation();
+    return headerAnimation();
   }, []);
 
   return (
