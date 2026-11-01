@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 
+import { SectionHeading } from "../section-heading/section-heading.component";
 import { recommendationData } from "./recommendation.data";
 
 import "./recommendation.style.css";
 
 const AUTOPLAY_MS = 7000;
 
-// Cards visible at once (sidenav takes 300px above 992px, so 3 cards need a wide screen)
+// Cards visible at once
 const getPerView = () => {
-  if (window.innerWidth >= 1400) return 3;
+  if (window.innerWidth >= 1200) return 3;
   if (window.innerWidth >= 768) return 2;
   return 1;
 };
@@ -26,6 +27,12 @@ const isKeyboardFocus = (el) => {
   }
 };
 
+const Chevron = ({ d }) => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d={d} />
+  </svg>
+);
+
 const RecommendationCard = ({
   name,
   image,
@@ -39,7 +46,7 @@ const RecommendationCard = ({
   const isLong = text.length > 300;
 
   return (
-    <div className="recommendation__card">
+    <article className="recommendation__card">
       <div className="recommendation__author">
         <img className="recommendation__photo" src={image} alt={name} />
         <div>
@@ -48,7 +55,9 @@ const RecommendationCard = ({
           <p className="recommendation__meta">{relationship}</p>
         </div>
       </div>
-      <i className="material-icons recommendation__quote-icon">format_quote</i>
+      <svg className="recommendation__quote-icon" width="34" height="26" viewBox="0 0 32 24" aria-hidden="true">
+        <path d="M0 24V14C0 6 4 1 12 0l1 4c-4 1-6 4-6 8h5v12H0Zm19 0V14c0-8 4-13 12-14l1 4c-4 1-6 4-6 8h5v12H19Z" />
+      </svg>
       <p
         className={`recommendation__text ${
           isLong && !expanded ? "recommendation__text--clamped" : ""
@@ -65,7 +74,7 @@ const RecommendationCard = ({
           {expanded ? "Show less" : "Read more"}
         </button>
       )}
-    </div>
+    </article>
   );
 };
 
@@ -112,13 +121,11 @@ export const Recommendation = () => {
   };
 
   return (
-    <section id="recommendation" className="scrollFollower">
-      <span className="anchor"></span>
-      <h2 className="section__header">RECOMMENDATIONS</h2>
-      <div className="section__container">
-        <h3>
-          <blockquote>What my teammates say</blockquote>
-        </h3>
+    <section id="recommendations" className="section">
+      <div className="section__inner">
+        <SectionHeading eyebrow="02 / RECOMMENDATIONS">
+          What my teammates say
+        </SectionHeading>
 
         <div
           className="recommendation__slider"
@@ -132,11 +139,11 @@ export const Recommendation = () => {
           onTouchEnd={handleTouchEnd}
         >
           <button
-            className="recommendation__arrow recommendation__arrow--prev"
+            className="recommendation__arrow"
             onClick={() => goTo(current - 1)}
             aria-label="Previous recommendation"
           >
-            <i className="material-icons">chevron_left</i>
+            <Chevron d="M15 18l-6-6 6-6" />
           </button>
 
           <div className="recommendation__viewport">
@@ -171,11 +178,11 @@ export const Recommendation = () => {
           </div>
 
           <button
-            className="recommendation__arrow recommendation__arrow--next"
+            className="recommendation__arrow"
             onClick={() => goTo(current + 1)}
             aria-label="Next recommendation"
           >
-            <i className="material-icons">chevron_right</i>
+            <Chevron d="M9 18l6-6-6-6" />
           </button>
         </div>
 
@@ -189,7 +196,9 @@ export const Recommendation = () => {
               onClick={() => goTo(i)}
               aria-label={`Show recommendations starting from ${recommendationData[i].name}`}
               aria-current={i === current}
-            />
+            >
+              <span />
+            </button>
           ))}
         </div>
 

@@ -1,40 +1,32 @@
 import React from 'react';
-import { Icon } from 'react-materialize';
-
-import './experience-card.style.css';
 
 export const ExperienceCardLarge = () => (
-	<div className='card wide gradient-border'>
-		<div className='bar top'></div>
-		<div className='bar right delay'></div>
-		<div className='bar bottom delay'></div>
-		<div className='bar left'></div>
-		<div className='card-content card-highlight'>
-			<span className='card-title'>New opportunity?</span>
-			<p>
-				This slot is exclusively available for all employers. Interested
-				in me for your team? Contact and take this slot!
+	<div className='experience__cta-border'>
+		<div className='experience__cta'>
+			<h3 className='experience__cta-title'>New opportunity?</h3>
+			<p className='experience__cta-text'>
+				This spot is open to every employer. Want me on your team? Reach out
+				and it's yours.
 			</p>
-			<div className='card-link margin-top-3'>
+			<div className='experience__cta-links'>
 				<a
 					href='https://linkedin.com/in/bluerainmango'
 					target='_blank'
 					rel='noopener noreferrer'
-          className='play-btn'
+					className='experience__cta-button'
 				>
-					Contact via Linkedin
+					Contact via LinkedIn
 				</a>
-				<a href='mailto:emily.jiyeon.yu@gmail.com'>
-					{/* <p className="valign-wrapper">Send Email</p> */}
-					Send Email
+				<a className='experience__cta-email' href='mailto:emily.jiyeon.yu@gmail.com'>
+					Send email
 				</a>
 			</div>
 		</div>
 	</div>
 );
 
-// Emphasize metrics in a work description (e.g. 96%, 2M+, L4)
-const METRIC = /(\d+%|\d+M\+|\bL\d\b)/;
+// Emphasize metrics in a work description (e.g. 96%, 2M+)
+const METRIC = /(\d+%|\d+M\+)/;
 
 const highlightMetrics = (text) =>
 	text.split(METRIC).map((part, i) =>
@@ -47,25 +39,30 @@ const highlightMetrics = (text) =>
 		)
 	);
 
+const ExternalIcon = () => (
+	<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' aria-hidden='true'>
+		<path d='M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5' />
+	</svg>
+);
+
 export const ExperienceItem = (props) => (
-	<article className='experience__item'>
+	<article
+		className={`experience__item ${props.current ? 'experience__item--current' : ''}`}
+	>
 		<span className='experience__dot' aria-hidden='true'></span>
 		<div className='experience__card'>
 			<header className='experience__header'>
-				<img className='experience__logo' src={props.image} alt='' />
+				<span className='experience__logo'>
+					<img src={props.image} alt='' />
+				</span>
 				<div className='experience__heading'>
-					<h4 className='experience__title'>{props.title}</h4>
+					<h3 className='experience__title'>{props.title}</h3>
 					<p className='experience__company'>
 						{props.company}
-						<span className='experience__location'>
-							{' '}
-							· {props.location}
-						</span>
+						<span className='experience__location'>, {props.location}</span>
 					</p>
 				</div>
-				<p className='experience__period'>
-					{props.period}
-				</p>
+				<p className='experience__period'>{props.period}</p>
 			</header>
 
 			<ul className='experience__works'>
@@ -84,7 +81,7 @@ export const ExperienceItem = (props) => (
 							rel='noopener noreferrer'
 						>
 							{link.name}
-							<Icon tiny>open_in_new</Icon>
+							<ExternalIcon />
 						</a>
 					))}
 				</div>

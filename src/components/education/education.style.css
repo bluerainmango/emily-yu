@@ -1,91 +1,181 @@
-/* Education */
-
-#education .card {
-  border-radius: 0;
-}
-#education {
-  margin-bottom: 10rem;
-}
-#education h5 {
-  font-weight: bold;
-}
-
 /* Timeline bar fading downward (same as Experience) */
+.education__timeline {
+  position: relative;
+  padding-left: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
 .education__timeline::before {
   content: "";
   position: absolute;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  top: 20px;
+  bottom: 12px;
+  left: 19px;
   width: 3px;
-  background: linear-gradient(to bottom, rgb(0, 162, 255), rgba(13, 71, 161, 0.15));
+  border-radius: 2px;
+  background: linear-gradient(var(--blue), rgba(47, 111, 235, 0.12));
 }
 
-@media only screen and (max-width: 1360px) {
-  /* Education */
-  figure {
-    margin: 1rem 0;
+.education__item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+}
+.education__icon {
+  position: absolute;
+  top: -2px;
+  left: -56px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education__side {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.education__title {
+  margin-top: 8px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.education__logo {
+  width: 140px;
+  height: 110px;
+  border-radius: 16px;
+  background: var(--cloud);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.education__logo img {
+  width: 112px;
+  height: 88px;
+  object-fit: contain;
+}
+
+.education__details {
+  flex: 1 1 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.education__program {
+  margin-top: 8px;
+  font-size: 17px;
+}
+.education__location {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--mist);
+}
+.education__period {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* Accordion */
+.education__panels {
+  border-radius: 14px;
+  border: 1px solid var(--line-card);
+  background: var(--surface);
+  overflow: hidden;
+}
+.education__panel + .education__panel {
+  border-top: 1px solid var(--line-soft);
+}
+.education__panel-toggle {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 20px;
+  border: none;
+  background: none;
+  color: var(--cloud);
+  font: 500 16px var(--font-body);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.education__panel-toggle:hover {
+  color: var(--mango);
+}
+.education__panel-toggle:focus-visible {
+  outline-offset: -2px;
+}
+.education__panel-toggle span {
+  flex: 1 1 auto;
+}
+.education__panel-icon {
+  stroke: var(--rain);
+}
+.education__panel-chevron {
+  stroke: var(--mist);
+  transition: transform 0.2s;
+}
+.education__panel-toggle[aria-expanded="true"] .education__panel-chevron {
+  transform: rotate(180deg);
+}
+.education__panel-body {
+  padding: 0 20px 20px 50px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--mist);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.education__panel-body a {
+  align-self: flex-start;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .education__timeline {
+    padding-left: 48px;
   }
-  .ta img {
-    border-radius: 50%;
+  .education__timeline::before {
+    left: 15px;
   }
-  .grade {
-    font-size: 1.5rem;
+  .education__icon {
+    left: -48px;
+    width: 34px;
+    height: 34px;
+  }
+  .education__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .education__side {
+    flex-basis: 100%;
+  }
+  .education__title {
+    margin-top: 4px;
+  }
+  .education__details {
+    flex-basis: 100%;
+  }
+  .education__program {
+    margin-top: 0;
+  }
+  .education__panel-body {
+    padding-left: 20px;
   }
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 993px) {
-  /* Education */
-  .card.horizontal {
-    display: flex;
-    flex-direction: column;
-  }
-  /* .card-image {
-    height: auto;
-  } */
-  .ta {
-    margin: 0 3rem;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  /* Education */
-  .card.horizontal {
-    display: flex;
-    flex-direction: column;
-  }
-  /* .card-image {
-    height: auto;
-  } */
-  .comment {
-    flex-direction: column;
-  }
-  .ta {
-    margin: 1rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .ta img {
-    max-width: 7rem;
-    border-radius: 50%;
-  }
-  .comment-words {
-    font-size: 1.4rem;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  /* Experience, Education(text) */
-  .card-content p,
-  li,
-  .card-link {
-    font-size: 1.3rem;
-  }
-  #experience {
-    margin-bottom: 9rem;
+@media (prefers-reduced-motion: reduce) {
+  .education__panel-chevron {
+    transition: none;
   }
 }

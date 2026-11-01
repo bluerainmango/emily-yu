@@ -1,0 +1,61 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(10, 28, 61, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 32px;
+}
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--cloud);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+}
+.nav__brand:hover {
+  color: var(--cloud);
+}
+.nav__links {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  font-size: 15px;
+}
+.nav__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--mist);
+  text-decoration: none;
+}
+.nav__links a:hover {
+  color: var(--mango);
+}
+
+/* On phones the links wrap to a second row, so let the bar scroll away */
+@media (max-width: 767px) {
+  .nav {
+    position: relative;
+  }
+  .nav__inner {
+    padding: 10px 20px;
+  }
+  .nav__links {
+    gap: 0 18px;
+  }
+}

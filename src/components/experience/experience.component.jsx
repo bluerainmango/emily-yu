@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Row, Col } from "react-materialize";
+import { SectionHeading } from "../section-heading/section-heading.component";
 import {
   ExperienceCardLarge,
   ExperienceItem,
@@ -12,26 +12,21 @@ import "./experience.style.css";
 
 export const Experience = () => {
   return (
-    <section id="experience" className="scrollFollower">
-      <span className="anchor"></span>
-      {/* <span className="anchor" id="anchor-experience"></span> */}
-      <h2 className="section__header">EXPERIENCE</h2>
-      <div className="section__container">
-        <h3>
-          <blockquote>
-            Diligent and a hard worker. Trustworthy and honest employee.
-          </blockquote>
-        </h3>
+    <section id="experience" className="section section--alt">
+      <div className="section__inner">
+        <SectionHeading eyebrow="03 / EXPERIENCE">
+          Diligent, trustworthy, and honest. A teammate you can count on.
+        </SectionHeading>
 
-        <Row>
-          <Col s={12}>
-            <ExperienceCardLarge />
-          </Col>
-        </Row>
+        <ExperienceCardLarge />
 
         <div className="experience__timeline">
-          {experienceData.map((experience) => (
-            <ExperienceItem key={experience.company} {...experience} />
+          {experienceData.map((experience, i) => (
+            <ExperienceItem
+              key={experience.company}
+              current={i === 0}
+              {...experience}
+            />
           ))}
         </div>
       </div>

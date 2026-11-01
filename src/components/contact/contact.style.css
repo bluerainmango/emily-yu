@@ -1,34 +1,63 @@
-/* Contact */
-#contact {
-  min-height: 100vh;
+.contact {
+  background: var(--mango);
+  color: var(--night);
 }
-.contact-info {
-  margin: 0 auto 3rem 4rem;
-}
-.contact-info > * {
+.contact__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 112px 24px 64px;
   display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contact__title {
+  max-width: 900px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.contact__link {
+  display: inline-flex;
   align-items: center;
-  font-size: 1.75rem;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 2px solid var(--night);
+  color: var(--night);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
 }
-.contact-info > svg {
-  width: 5rem;
+.contact__link:hover {
+  background: var(--night);
+  color: var(--mango);
 }
-.icon {
-  display: inline-block;
-  width: 4rem;
-  height: 4rem;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-  margin-right: 2rem;
+.contact__link--primary {
+  background: var(--night);
+  color: var(--mango);
+}
+.contact__link--primary:hover {
+  background: var(--deep);
+  color: var(--mango-light);
+}
+.contact .contact__link:focus-visible {
+  outline-color: var(--night);
+}
+.contact__copyright {
+  margin-top: 40px;
+  font-family: var(--font-mono);
+  font-size: 13px;
 }
 
-@media only screen and (max-width: 460px) {
-  /* Contact */
-  .contact-info {
-    margin: 0 0 3rem 0;
-  }
-  .contact-info svg {
-    width: 3rem;
+@media (max-width: 767px) {
+  .contact__inner {
+    padding: 80px 20px 48px;
   }
 }

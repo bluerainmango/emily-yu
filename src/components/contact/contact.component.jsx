@@ -1,29 +1,37 @@
 import React from "react";
-import { ContactSlot } from "../contact-slot/contact-slot.component";
 
 import "./contact.style.css";
 
 export const Contact = () => {
   const contacts = [
-    { icon: "icon-gmail", to: "mailto:emily.jiyeon.yu@gmail.com" },
-    { icon: "icon-linkedin", to: "https://linkedin.com/in/bluerainmango" },
-    { icon: "icon-github", to: "https://github.com/bluerainmango" },
-    // { icon: "icon-mobile", to: "" },
+    { label: "emily.jiyeon.yu@gmail.com", to: "mailto:emily.jiyeon.yu@gmail.com", primary: true },
+    { label: "LinkedIn", to: "https://linkedin.com/in/bluerainmango" },
+    { label: "GitHub", to: "https://github.com/bluerainmango" },
   ];
 
   return (
-    <section id="contact" className="scrollFollower height-100vh">
-      <span className="anchor"></span>
-      {/* <span className="anchor" id="anchor-contact"></span> */}
-      <h2 className="section__header">CONTACT</h2>
-      <div className="section__container">
-        <h3>
-          <blockquote>Email preferred</blockquote>
-        </h3>
-        {contacts.map((con) => (
-          <ContactSlot key={con.icon} {...con} />
-        ))}
+    <footer id="contact" className="contact">
+      <div className="contact__inner">
+        <h2 className="contact__title">
+          Let's build something fast, accessible, and thoughtful together.
+        </h2>
+        <div className="contact__links">
+          {contacts.map((con) => (
+            <a
+              key={con.label}
+              className={`contact__link ${con.primary ? "contact__link--primary" : ""}`}
+              href={con.to}
+              {...(con.to.startsWith("https://") && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
+            >
+              {con.label}
+            </a>
+          ))}
+        </div>
+        <p className="contact__copyright">© {new Date().getFullYear()} Emily Yu | emily-yu.dev</p>
       </div>
-    </section>
+    </footer>
   );
 };

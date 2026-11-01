@@ -1,108 +1,120 @@
-/* ABOUT */
-#about {
-  position: relative;
-  margin-bottom: 36rem;
-}
-.section__description {
-  font-size: 1.7rem;
-}
-.section__description p:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-#about::before {
-  content: "";
-  position: absolute;
-  left: -30rem;
-  height: 100vh;
-  background-color: rgb(0, 162, 255);
-  width: 30rem;
-}
-
-/* Two key strengths */
 .about__strengths {
-  display: flex;
-  gap: 3rem;
-  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 24px;
 }
 .about__strength {
-  flex: 1;
-  padding: 3.5rem 3rem;
-  border-top: 6px solid rgb(0, 162, 255);
-  border-radius: 4px;
-  background-color: #f4faff;
-  box-shadow: 0 2px 8px rgba(13, 71, 161, 0.12);
-  font-size: 1.6rem;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid var(--line-card);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.about__strength-icon {
-  font-size: 4.8rem !important;
-  color: rgb(0, 162, 255);
+.about__strength-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--mango);
 }
 .about__strength-title {
-  margin: 1rem 0 2rem;
-  font-size: 2.8rem;
+  font-family: var(--font-display);
   font-weight: 600;
-  color: #0d47a1;
+  font-size: 32px;
+  line-height: 1.15;
 }
-.about__metrics {
-  margin: 2.5rem 0 0;
+.about__strength-text {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--mist);
 }
-.about__metrics li {
+
+/* Score gauges */
+.about__gauges {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.about__gauge {
+  --tone: var(--mango);
   display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
-  padding: 1rem 0;
-  border-top: 1px solid rgba(13, 71, 161, 0.12);
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
 }
-.about__metric-value {
-  min-width: 7.5rem;
-  font-size: 3.2rem;
-  font-weight: 600;
-  color: rgb(0, 162, 255);
+.about__gauge--rain {
+  --tone: var(--rain);
 }
-.about__metric-label em {
-  color: rgb(120, 120, 120);
+.about__gauge-ring {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--tone) 0 var(--percent),
+    rgba(126, 176, 255, 0.18) var(--percent) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.about__gauge-value {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 22px;
+  color: var(--tone);
+}
+.about__gauge-label {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--mist);
+}
+
+/* Quotes from recommendations */
 .about__quotes {
-  margin: 2.5rem 0 0;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.about__quotes li {
-  padding: 1.2rem 0 1.2rem 1.5rem;
-  border-top: 1px solid rgba(13, 71, 161, 0.12);
-  border-left: 3px solid rgb(0, 162, 255);
+.about__quotes--divided {
+  padding-top: 20px;
+  border-top: 1px solid var(--line-soft);
 }
-.about__quotes q {
-  display: block;
-  font-size: 1.7rem;
+.about__quote {
+  font-family: var(--font-display);
   font-style: italic;
-  color: #0d47a1;
+  font-size: 20px;
+  line-height: 1.4;
 }
 .about__quote-author {
   display: block;
-  margin-top: 0.5rem;
-  font-size: 1.3rem;
-  color: rgb(120, 120, 120);
-}
-.about__strength-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
-  font-weight: 600;
-  color: #0d47a1;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--mist);
 }
 
-@media only screen and (max-width: 768px) {
-  .about__strengths {
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 460px) {
-  #about {
-    margin-bottom: 10rem;
-  }
+@media (max-width: 767px) {
   .about__strength {
-    padding: 2.5rem 2rem;
+    padding: 28px 22px;
+  }
+  .about__strength-title {
+    font-size: 28px;
+  }
+  .about__gauge-ring {
+    width: 84px;
+    height: 84px;
+  }
+  .about__gauge-value {
+    width: 68px;
+    height: 68px;
+    font-size: 19px;
   }
 }

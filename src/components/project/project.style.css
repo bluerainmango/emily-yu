@@ -1,67 +1,186 @@
-/* PROJECTS */
-.carousel-item {
-  width: 40rem !important;
-  height: max-content !important;
-  margin: 0 auto;
-  position: relative;
+/* Slider */
+.project__slider {
+  --w: min(400px, calc(100vw - 72px));
+  --gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
-.carousel-item .col {
-  padding: 0 !important;
+.project__viewport {
+  overflow: hidden;
 }
-
-.carousel {
-  height: 75rem !important;
+.project__track {
   display: flex;
   align-items: center;
+  gap: var(--gap);
+  /* Start with the first card centered, then shift one card + gap per step */
+  padding-left: calc(50% - var(--w) / 2);
+  transform: translateX(calc(var(--index) * (var(--w) + var(--gap)) * -1));
+  transition: transform 0.5s ease-in-out;
 }
-.carousel-help {
+.project__slide {
+  flex: 0 0 var(--w);
+  display: flex;
+  opacity: 0.45;
+  transform: scale(0.88);
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.project__slide:hover {
+  opacity: 0.65;
+}
+.project__slide--active,
+.project__slide--active:hover {
+  opacity: 1;
+  transform: none;
+  cursor: auto;
+}
+
+.project__card {
+  flex: 1 1 auto;
+  border-radius: 16px;
+  border: 1px solid var(--line-card);
+  background: var(--surface);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/* Show the whole screenshot (they have different shapes) */
+.project__image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--deep);
+  border-bottom: 1px solid var(--line-soft);
+}
+.project__image img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  font-size: 1.6rem;
+  height: 100%;
+  object-fit: contain;
+}
+.project__body {
+  flex: 1 1 auto;
+  padding: 18px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.project__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.project__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.2;
+}
+.project__type {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(126, 176, 255, 0.4);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--rain);
+}
+.project__type--Team {
+  border-color: var(--mango);
+  color: var(--mango);
+}
+.project__description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--mist);
+}
+.project__role {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--mist);
+}
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.project__tags li {
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(126, 176, 255, 0.12);
+  font-size: 11px;
+  color: var(--cloud);
+}
+.project__links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+.project__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--rain);
+}
+.project__links a:hover {
+  color: var(--cloud);
+}
+
+/* Arrows + counter */
+.project__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.project__arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(126, 176, 255, 0.4);
+  background: var(--surface);
+  color: var(--cloud);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project__arrow:hover,
+.project__arrow:focus-visible {
+  border-color: var(--mango);
+  background: var(--mango);
+  color: var(--night);
+}
+.project__count {
+  min-width: 72px;
   text-align: center;
-  color: rgb(148, 148, 148);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--mist);
+}
+.project__count span {
+  color: var(--mango);
 }
 
-#project {
-  margin-bottom: 0rem;
-}
-.role {
-  color: #b71c1c;
-  font-size: 1.4rem;
-  font-weight: bolder;
-  padding-bottom: 1rem;
-}
-
-@media only screen and (max-width: 992px) {
-  .card-header :first-child {
-    margin-right: 0.5rem;
+@media (max-width: 767px) {
+  .project__slider {
+    --w: calc(100vw - 56px);
+    --gap: 12px;
   }
-  .card-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  blockquote {
-    font-size: 2.5rem;
-  }
-
-  .section__header {
-    padding: 1rem 3rem;
+  .project__body {
+    padding: 20px;
   }
 }
 
-@media only screen and (max-width: 850px) and (orientation: landscape) {
-  .carousel {
-    height: 80rem !important;
-  }
-}
-
-@media only screen and (max-width: 460px) {
-  .carousel-item,
-  .carousel-item .card {
-    width: 30rem !important;
-    transform: translateX(0.4rem);
-  }
-  .card-content {
-    padding: 1.5rem;
+@media (prefers-reduced-motion: reduce) {
+  .project__track,
+  .project__slide {
+    transition: none;
   }
 }

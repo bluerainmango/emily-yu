@@ -1,5 +1,6 @@
 import React from "react";
 
+import { SectionHeading } from "../section-heading/section-heading.component";
 import { SkillSlot } from "../skill-slot/skill-slot.component";
 import html5 from "../../assets/img/html5.svg";
 import css3 from "../../assets/img/css3.svg";
@@ -44,16 +45,11 @@ import "./skill.style.css";
 
 export const Skill = () => {
   return (
-    <section id="skill" className="scrollFollower">
-      <span className="anchor"></span>
-      {/* <span className="anchor" id="anchor-skill"></span> */}
-      <h2 className="section__header">SKILLS</h2>
-      <div className="section__container">
-        <h3>
-          <blockquote>
-            Love learning and always ready for new technology
-          </blockquote>
-        </h3>
+    <section id="skills" className="section section--alt">
+      <div className="section__inner">
+        <SectionHeading eyebrow="05 / SKILLS">
+          I love learning, and I'm always excited to pick up something new.
+        </SectionHeading>
 
         <SkillSlot
           title="Frontend"

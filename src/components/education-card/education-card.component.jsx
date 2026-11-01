@@ -1,111 +1,77 @@
-import React from "react";
-import { Collapsible, CollapsibleItem, Icon } from "react-materialize";
-import taAdam from "../../assets/img/adam.png";
-import taAndy from "../../assets/img/andy.jpeg";
+import React, { useState } from "react";
 
-import "./education-card.style.css";
+const icons = {
+  learn: "M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z",
+  person: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 21c0-4 4-6 8-6s8 2 8 6",
+};
 
-export const EducationCard = (props) => (
-  <div className="row no-margin">
-    <div className="card horizontal wide card-restyle-edu">
-      <div className="card-left">
-        <h5 className="no-margin">
-          <i className="material-icons medium moving-icon icon-bg">school</i>
-          {props.title}
-        </h5>
-        <div className="card-image card-img-edu">
-          <img src={props.logo} alt={`${props.logo}`} />
-        </div>
-      </div>
-      <div className="card-stacked">
-        <div className="card-content">
-          <p>{props.program}</p>
-          <p>{props.location}</p>
-
-          <Collapsible accordion>
-            <CollapsibleItem
-              expanded={false}
-              header="What I learned"
-              icon={<Icon>widgets</Icon>}
-              node="div"
-            >
-              {props.study}
-              {props.link ? (
-                <a
-                  href={props.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="margin-top-3"
-                >
-                  <br /> Curriculum Detail
-                </a>
-              ) : (
-                ""
-              )}
-            </CollapsibleItem>
-
-            {["ucr", "swu"].includes(props.id) ? (
-              <CollapsibleItem
-                expanded={false}
-                header="How I was"
-                icon={<Icon>person_pin</Icon>}
-                node="div"
-              >
-                {props.id === "ucr" ? <HowIWasUcr /> : <HowIWasSwu />}
-              </CollapsibleItem>
-            ) : (
-              ""
-            )}
-          </Collapsible>
-        </div>
-      </div>
-    </div>
-  </div>
+const Svg = ({ children, ...props }) => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+    {children}
+  </svg>
 );
 
-function HowIWasUcr() {
-  return (
-    <div>
-      <blockquote className="grade">Average Academic Grade: A+</blockquote>
-      <p className="how-header">Some of the comments for projects</p>
+const Panel = ({ id, label, icon, lines, link }) => {
+  const [open, setOpen] = useState(false);
 
-      <div className="row comment">
-        <figure className="ta">
-          <img src={taAdam} alt="UCR TA's comment" />
-          <figcaption className="center">Adam Abundis, Nov.21.2019</figcaption>
-        </figure>
-        <div className="valign-wrapper comment-words">
-          "Great job...Using a while loop and setting an exit condition was a
-          really good use of ensuring your requirement for min-max of
-          characters. This was a professional-level solution...This is a best
-          practice that will be appreciated by employers. Overall, great job.
-          Keep up the good work."
+  return (
+    <div className="education__panel">
+      <button
+        className="education__panel-toggle"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-controls={id}
+      >
+        <Svg className="education__panel-icon">
+          <path d={icons[icon]} />
+        </Svg>
+        <span>{label}</span>
+        <Svg className="education__panel-chevron">
+          <path d="M6 9l6 6 6-6" />
+        </Svg>
+      </button>
+      {open && (
+        <div className="education__panel-body" id={id}>
+          {lines.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+          {link && (
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              See the curriculum
+            </a>
+          )}
         </div>
-      </div>
-      <div className="row comment">
-        <figure className="ta">
-          <img src={taAndy} alt="UCR TA's comment" />
-          <figcaption className="center">Andy Huynh, Apr.08.2020</figcaption>
-        </figure>
-        <div className="valign-wrapper comment-words">
-          "Great job on the homework, including going above and beyond. Your
-          work has vastly improved and your code looks very neat and organized.
-          Great quality work overall."
-        </div>
-      </div>
+      )}
     </div>
   );
-}
+};
 
-function HowIWasSwu() {
-  return (
-    <div>
-      <ul>
-        <li>PGA: 4.1/4.5</li>
-        <li>Scholarship awarded for 2007 - 2011</li>
-        <li>Graduated first place in the department</li>
-        <li>Top 5% of the university</li>
-      </ul>
+export const EducationCard = (props) => (
+  <article className="education__item">
+    <span className="education__icon" aria-hidden="true">
+      <Svg width="22" height="22" stroke="#FFFFFF">
+        <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+        <path d="M6 12v5c3 2 9 2 12 0v-5" />
+      </Svg>
+    </span>
+
+    <div className="education__side">
+      <h3 className="education__title">{props.title}</h3>
+      <span className="education__logo">
+        <img src={props.logo} alt={`${props.school} logo`} />
+      </span>
     </div>
-  );
-}
+
+    <div className="education__details">
+      <p className="education__program">{props.program}</p>
+      <p className="education__location">
+        {props.location}
+      </p>
+      <div className="education__panels">
+        {props.panels.map((panel, i) => (
+          <Panel key={panel.label} id={`${props.id}-panel-${i}`} {...panel} />
+        ))}
+      </div>
+    </div>
+  </article>
+);
