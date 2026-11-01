@@ -15,7 +15,7 @@ const highlights = [
 	{
 		value: '74%',
 		percent: 74,
-		label: 'faster test runs',
+		label: 'faster execution runs',
 		where: 'Extron',
 		description: '74 percent faster execution',
 	},
